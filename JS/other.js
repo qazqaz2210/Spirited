@@ -1,9 +1,8 @@
 const menu_btn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
 const a = document.querySelectorAll(".list-a");
-const view_menu = document.querySelector('.view-menu');
-const news = document.querySelectorAll('.news')
-const how_to_buy_btn = document.querySelector(".how-to-buy-btn");
+const news = document.querySelector('.news');
+const news_phone = document.querySelector('.news-phone');
 
 
 // 選單列開關JS
@@ -13,7 +12,6 @@ menu_btn.onclick = function () {
         let shop_distance = (document.querySelector(".shop").offsetTop - 100)
         let shop_height = document.querySelector(".shop").offsetHeight
         if ((document.documentElement.scrollTop >= shop_distance) && (document.documentElement.scrollTop < (shop_distance + shop_height))) {
-            console.log("???");
             document.querySelectorAll('.menu-btn-line').forEach(element => {
                 element.classList.remove('menu-btn-line-light');
                 element.classList.add('menu-btn-line-dark');
@@ -43,45 +41,80 @@ function closeList() {
 }
 
 // 如果點選網頁內連結，關閉選單列（外聯不關閉）
-a.forEach(element => {
+a.forEach((element, index) => {
+
     element.onclick = function () {
         closeList();
         document.querySelector('input').checked = false;
+        if (index == 0) {
+            to_how_to_buy();
+        }
+        else {
+            to_about_us();
+        }
     }
 });
 
 //看全部菜單按按鈕打開、點背景關閉
-document.querySelector('.whole-menu-btn').onclick = function () {
+function view_all_menu() {
+    let view_menu;
+    if (document.body.clientWidth > 1199) {
+        view_menu = document.querySelector('.view-menu');
+
+    }
+    else {
+        view_menu = document.querySelector('.view-menu-phone');
+    }
     view_menu.style = "opacity:1";
     view_menu.classList.remove('d-none');
 }
-view_menu.addEventListener('click', event => {
+function view_all_menu_close() {
+    let view_menu
+    if (document.body.clientWidth > 1199) {
+        view_menu = document.querySelector('.view-menu');
+    }
+    else {
+        view_menu = document.querySelector('.view-menu-phone');
+    }
+
     if (view_menu == event.target) {
         view_menu.style = "opacity:0";
         setTimeout(function () {
             view_menu.classList.add('d-none');
         }, 1000);
     }
-})
+}
 
 //關閉最新消息
 function closeNews() {
-    news.forEach(element => {
-        element.style = 'display:none';
-    })
+    news.style = 'display:none';
+    news_phone.style = 'display:none';
+
 }
-news.forEach(element => {
-    element.addEventListener('click', event => {
-        if (element == event.target) {
-            element.style = "opacity:0";
-            setTimeout(function () {
-                element.style = 'display:none'
-            }, 1000);
-        }
-    })
+news.addEventListener('click', event => {
+    if (news == event.target) {
+        news.style = "opacity:0";
+        setTimeout(function () {
+            news.style = 'display:none'
+        }, 1000);
+    }
+});
+
+news_phone.addEventListener('click', event => {
+    if (news_phone == event.target) {
+        news_phone.style = "opacity:0";
+        setTimeout(function () {
+            news_phone.style = 'display:none'
+        }, 1000);
+    }
 });
 
 // 跳轉至HOW TO BUY
-how_to_buy_btn.onclick = function () {
+function to_how_to_buy() {
     window.scrollTo(0, 5000)
+}
+
+// 跳轉至ABOUT US
+function to_about_us() {
+    window.scrollTo(0, 7000)
 }

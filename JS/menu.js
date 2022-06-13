@@ -1,7 +1,20 @@
-const items = document.querySelector(".items")
-const mid = document.querySelector(".mid");
 const fortune_img = document.querySelector(".fortune_img");
 let item;
+let item_index = 0;
+let web_width = '';
+
+if (document.body.clientWidth > 1799) {
+    web_width = 'L'
+}
+else if (document.body.clientWidth > 1199) {
+    web_width = 'M'
+}
+else if (document.body.clientWidth > 599) {
+    web_width = 'S'
+}
+else {
+    web_width = 'XS'
+}
 
 fetch('./item.json')
     .then(function (response) {
@@ -9,59 +22,213 @@ fetch('./item.json')
     })
     .then(function (myJson) {
         item = myJson;
-        Create(item, 0);
+        if (document.body.clientWidth > 1199) {
+            Create(item);
+        }
+        else {
+            Create_sm(item);
+        }
+        ChangeSize(item);
         fortuneCookies(item);
     });
 
 // 切換類別後，重新印該類別的商品
 function clickEvent(index) {
-    Create(item, index);
+    item_index = index;
+    Create(item);
+}
+
+function info_btn(btn) {
+    if (btn == 0) {
+        document.querySelectorAll('.description-phone').forEach(element => {
+            element.style = "display: none;"
+        });
+        document.querySelectorAll('.preservation-phone').forEach(element => {
+            element.style = "display: flex;"
+        });
+
+    }
+    else {
+        document.querySelectorAll('.description-phone').forEach(element => {
+            element.style = "display: flex;"
+        });
+        document.querySelectorAll('.preservation-phone').forEach(element => {
+            element.style = "display: none;"
+        });
+    }
+}
+
+//如果改變瀏覽器寬度，重新判斷swiper大小
+function ChangeSize(item) {
+    window.addEventListener('resize', () => {
+        if (document.body.clientWidth > 1799) {
+            if (web_width != 'L') {
+                if (web_width == 'S') {
+                    Create(item);
+                }
+                web_width = 'L'
+                swipermidsize(item);
+            }
+        }
+        else if (document.body.clientWidth > 1199) {
+            if (web_width != 'M') {
+                if (web_width == 'S') {
+                    Create(item);
+                }
+                web_width = 'M'
+                swipermidsize(item);
+            }
+        }
+        else if (document.body.clientWidth > 599) {
+            if (web_width != 'S') {
+                web_width = 'S'
+                Create_sm(item);
+                swipermidsize(item);
+            }
+        }
+        else {
+            if (web_width != 'XS') {
+                web_width = 'XS'
+                Create_sm(item);
+                swipermidsize(item);
+            }
+        }
+    });
 }
 
 //印swiper外框
-function Create(item, index) {
-    items.innerHTML = "";
-    mid.innerHTML = "";
-    if (index >= 0 && index < 4) {
-        //中間的框
-        mid.innerHTML +=
+function Create(item) {
+    if (item_index >= 0 && item_index < 4) {
+        document.querySelector(".shop").innerHTML =
             `
-        <div class="item-mid position-relative h-100">
-            <div class="swipermid mySwipermid">
-                <div class="swiper-wrapper swipermid-wrapper">
-                </div>
-            </div>
-            <div class="swipermid-button-next swiper-button-next"></div>
-            <div class="swipermid-button-prev swiper-button-prev"></div>
-        </div>
-        `
-        // 印裡面細項
-        document.querySelector(".swipermid-wrapper").innerHTML += Create_content(item, index, "mid");
+        <div class="shop-main">
+            <div class="top w-100">
+                <div class="kanban-bg h-100">
+                    <div class="kanban">
 
-        //上方的框
-        items.innerHTML +=
-            `
-        <div class="swiper-item">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper swipertop-wrapper">
+                        <!-- 類別按鈕 -->
+                        <div class="types w-100">
+                            <div class="cookie-type type" onclick="clickEvent(0)">
+                                <div class="icon">
+                                    <img src="./img/cookie-icon.svg" alt="" height="100%">
+                                </div>
+                                <div>
+                                    <div class="title-en">Cookies</div>
+                                    <div class="title-ch">餅乾</div>
+                                </div>
+                            </div>
+                            <div class="cake-type type" onclick="clickEvent(1)">
+                                <div class="icon">
+                                    <img src="./img/cake-icon.svg" alt="" height="100%">
+                                </div>
+                                <div>
+                                    <div class="title-en">Cakes</div>
+                                    <div class="title-ch">蛋糕</div>
+                                </div>
+                            </div>
+                            <div class="other-type type" onclick="clickEvent(2)">
+                                <div class="icon">
+                                    <img src="./img/other-icon.svg" alt="" height="100%">
+                                </div>
+                                <div>
+                                    <div class="title-en">Others</div>
+                                    <div class="title-ch">其他</div>
+                                </div>
+                            </div>
+                            <div class="gift-type type" onclick="clickEvent(3)">
+                                <div class="icon">
+                                    <img src="./img/gift-icon.svg" alt="" height="100%">
+                                </div>
+                                <div>
+                                    <div class="title-en">Gifts</div>
+                                    <div class="title-ch">禮物</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 細項按鈕 -->
+                        <div class="items w-100">
+                            <div class="swiper-item">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper swipertop-wrapper">
+                                    ${Create_content(item, "top")}
+                                    </div>
+                                </div>
+                                <div class="swipertop-button-next swiper-button-next"></div>
+                                <div class="swipertop-button-prev swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右上的燈 -->
+                <div class="light h-100">
                 </div>
             </div>
-            <div class="swipertop-button-next swiper-button-next"></div>
-            <div class="swipertop-button-prev swiper-button-prev"></div>
+
+            <!-- 中間的swiper -->
+            <div class="mid w-100 h-50">
+                <div class="item-mid position-relative h-100">
+                    <div class="swipermid mySwipermid">
+                        <div class="swiper-wrapper swipermid-wrapper">
+                        ${Create_content(item, "mid")}
+                        </div>
+                    </div>
+                    <div class="swipermid-button-next swiper-button-next"></div>
+                    <div class="swipermid-button-prev swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <div class="bot w-100">
+                <div class="favor">
+                    *口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br>
+                    *Sweetness rating is subjective, since we are
+                    an American bakery, most items will be on the sweeter side</div>
+
+            </div>
+            <div class="shop-bottom">
+                <!-- 按鈕 -->
+                <div class="menu-btns d-flex">
+                    <!-- 看全部菜單 -->
+                    <div class="whole-menu-btn shop-btn" onclick="view_all_menu()"></div>
+                    <!-- 連到如何購買 -->
+                    <div class="how-to-buy-btn shop-btn" onclick="to_how_to_buy()"></div>
+                </div>
+                <!-- 全部菜單的圖片之swiper -->
+                <div class="w-100 vh-100 position-fixed d-none view-menu" onclick="view_all_menu_close()">
+                    <div class="view-menu-wrapper mx-auto">
+                        <div class="swiper mySwiper-menu">
+                            <div class="swiper-wrapper swiper-wrapper-menu">
+                                <div class="swiper-slide swiper-slide-menu">
+                                    <img src="./img/menu/menu-all.png" alt="" height="100%">
+                                </div>
+                                <div class="swiper-slide swiper-slide-menu">
+                                    <img src="./img/menu/menu-cakes.png" alt="" height="100%">
+                                </div>
+                                <div class="swiper-slide swiper-slide-menu">
+                                    <img src="./img/menu/menu-other.png" alt="" height="100%">
+                                </div>
+                                <div class="swiper-slide swiper-slide-menu">
+                                    <img src="./img/menu/menu-gift.png" alt="" height="100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swipermenu-button-next swiper-button-next"></div>
+                    <div class="swipermenu-button-prev swiper-button-prev"></div>
+                </div>
+            </div>
         </div>
         `
-        // 印細項
-        document.querySelector(".swipertop-wrapper").innerHTML += Create_content(item, index, "top");
     }
     // 綁定swiper
-    swipermidsize(index);
+    swipermidsize(item);
+
+
 }
-
 //印swiper裡面的內容
-function Create_content(item, index, position) {
+function Create_content(item, position) {
     let html = "";
-
-    item.item[index].forEach(element => {
+    item.item[item_index].forEach(element => {
         if (position == "top") {
             html +=
                 `
@@ -72,7 +239,7 @@ function Create_content(item, index, position) {
             `
         }
         else if (position == "mid") {
-            if (index != 3) {
+            if (item_index != 3) {
                 html +=
                     `
                 <div class="swiper-slide">
@@ -92,27 +259,189 @@ function Create_content(item, index, position) {
                         </div>
                     </div>
                 </div>
-                
-                `
+                    `
             }
             else {
                 html +=
                     `
                 <div class="swiper-slide">
-                        <div class="item-card w-100 h-100">
-                            <div class="item-pic">
-                                <img src="./img/photo/${element.img}" class="rounded-circle">
+                    <div class="item-card w-100 h-100">
+                        <div class="item-pic">
+                            <img src="./img/photo/${element.img}" class="rounded-circle">
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name w-100">
+                                <div class="item-name-en">${element.item_en}</div>
+                                <div class="item-name-ch">${element.item_ch}</div>
                             </div>
-                            <div class="item-info">
-                                <div class="item-name w-100">
-                                    <div class="item-name-en">${element.item_en}</div>
-                                    <div class="item-name-ch">${element.item_ch}</div>
+                        </div>
+                    </div>
+                </div>
+                `
+            }
+        }
+    });
+    return html
+}
+
+//印swiper外框_手機板
+function Create_sm(item) {
+    if (document.body.clientWidth > 599) {
+        document.querySelector('.shop').innerHTML = Create_sm_html()
+    }
+    else {
+        document.querySelector('.shop-phone').innerHTML = Create_sm_html()
+    }
+
+    function Create_sm_html() {
+        let html = '';
+        html +=
+            `
+        <div class="shop-main-phone">
+            <div class="top w-100">
+                <div class="kanban">
+                    <!-- 細項按鈕 -->
+                    <div class="items">
+                        Cookie
+                    </div>
+
+                    <!-- 類別按鈕 -->
+                    <div class="types">
+                        <div class="swiper mySwiper-item-icon">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cookie-type type">
+                                        <div class="icon">
+                                            <img src="./img/cookie-icon.svg" alt="" height="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cake-type type">
+                                        <div class="icon">
+                                            <img src="./img/cake-icon.svg" alt="" height="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-type type">
+                                        <div class="icon">
+                                            <img src="./img/other-icon.svg" alt="" height="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gift-type type">
+                                        <div class="icon">
+                                            <img src="./img/gift-icon.svg" alt="" height="100%">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+
+
+            </div>
+            <!-- 中間的swiper -->
+            <div class="mid w-100">
+                <div class="item-mid">
+                    <div class="swipermid mySwipermid">
+                        <div class="swiper-wrapper swipermid-wrapper">
+                            ${Create_content_sm(item)}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-bottom-phone">
+            <!-- 按鈕 -->
+            <div class="menu-btns d-flex">
+                <!-- 看全部菜單 -->
+                <div class="whole-menu-btn shop-btn" onclick="view_all_menu()"></div>
+            </div>
+            <!-- 全部菜單的圖片之swiper -->
+            <div class="w-100 vh-100 position-fixed d-none view-menu-phone" onclick="view_all_menu_close()">
+                <div class="view-menu-wrapper mx-auto">
+                    <div class="swiper mySwiper-menu">
+                        <div class="swiper-wrapper swiper-wrapper-menu">
+                            <div class="swiper-slide swiper-slide-menu">
+                                <img src="./img/menu/menu-all.png" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-menu">
+                                <img src="./img/menu/menu-cakes.png" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-menu">
+                                <img src="./img/menu/menu-other.png" alt="">
+                            </div>
+                            <div class="swiper-slide swiper-slide-menu">
+                                <img src="./img/menu/menu-gift.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swipermenu-button-next swiper-button-next"></div>
+                <div class="swipermenu-button-prev swiper-button-prev"></div>
+            </div>
+        </div>
+        `
+        return html
+    }
+
+    // 綁定swiper
+    swipermidsize(item);
+}
+
+//印swiper裡面的內容_手機板
+function Create_content_sm(item) {
+    let html = "";
+    item.item[item_index].forEach(element => {
+        if (item_index != 3) {
+            html +=
                 `
-            }
+            <div class="swiper-slide">
+                <div class="item-card w-100">
+                    <div class="item-info">
+                        <div class="item-name w-100">
+                            <div class="${(element.item_en.length > 15) ? 'item-name-en-s' : 'item-name-en'}"><img src="./img/menu-icon-left.png"
+                                    alt="">${element.item_en}<img src="./img/menu-icon-right.png" alt="">
+                            </div>
+                            <div class="item-name-ch">${element.item_ch}</div>
+                            <div class="item-sweet">
+                                甜度<div class="ml-2 d-flex">${outputSweet(element.sweet)}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-pic">
+                        <img src="./img/photo/${element.img}" class="rounded-circle">
+                    </div>
+                </div>
+                ${output_introduce_sm(element)}
+            </div>
+            `
+        }
+        else {
+            html +=
+                `
+            <div class="swiper-slide">
+                <div class="item-card w-100">
+                    <div class="item-info">
+                        <div class="item-name w-100">
+                            <div class="${(element.item_en.length > 15) ? 'item-name-en-s' : 'item-name-en'}"><img src="./img/menu-icon-left.png"
+                                    alt="">${element.item_en}<img src="./img/menu-icon-right.png" alt="">
+                            </div>
+                            <div class="item-name-ch">${element.item_ch}</div>
+                        </div>
+                    </div>
+                    <div class="item-pic">
+                        <img src="./img/photo/${element.img}" class="rounded-circle">
+                    </div>
+                </div>
+            </div>
+            `
         }
     });
     return html
@@ -173,6 +502,60 @@ function output_introduce(element) {
     return html;
 }
 
+function output_introduce_sm(element) {
+    let html = '';
+    if (element.introduce_ch != "") {
+        html +=
+            `
+        <div class="menu-info description-phone">
+            <p class="info-ch">
+                ${element.introduce_ch}<br>${element.composition_ch}
+            </p>
+            <p class="info-en">
+                ${element.introduce_en}${element.introduce_en.length > 0 ? "<br>" : ""}${element.composition_en}
+            </p>
+            <div class="info-btn" onclick="info_btn(0)">
+                <span class="info-ch">保存方式</span> <span class="info-en">Preservation></span>
+            </div>
+        </div>
+            
+        <div class="menu-info preservation-phone" style="display: none">
+            <p class="info-ch">
+                ${element.preservation_ch}
+            </p>
+            <p class="info-en">
+                ${element.preservation_en}
+            </p>
+            <div class="info-btn" onclick="info_btn(1)">
+                <span class="info-ch">商品描述</span> <span class="info-en">Description></span>
+            </div>
+        </div>
+        `
+    }
+    else {
+        html +=
+            `
+        <div class="menu-info description-phone">
+            <!--<p>
+                    *口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br>
+                    *Sweetness rating is subjective, since we are
+                    an American bakery, most items will be on the sweeter side
+                </p>-->
+                <p class="info-ch">
+                    ${element.composition_ch}<br>
+                    ${element.preservation_ch}
+                </p>
+                <p class="info-en">
+                    ${element.composition_en}<br>
+                    ${element.preservation_en}
+                </p>
+        </div>
+        
+        `
+    }
+    return html;
+}
+
 //印甜度
 function outputSweet(number) {
     let round = "";
@@ -187,18 +570,20 @@ function outputSweet(number) {
     return round;
 }
 
-//如果改變瀏覽器寬度，重新判斷swiper大小
-window.addEventListener('resize', swipermidsize);
-
 //swiper之JS
-
-function swipermidsize(index) {
+function swipermidsize(item) {
     //判斷瀏覽器寬度決定swiper有幾個
-    if (document.body.clientWidth >= 1800) {
+    if (web_width == 'L') {
         swiper(2);
     }
-    else {
+    else if (web_width == 'M') {
         swiper(1);
+    }
+    else if (web_width == 'S') {
+        swiper_sm(item);
+    }
+    else {
+        swiper_sm(item);
     }
     function swiper(index) {
         //上方選單 細項選擇的swiper
@@ -206,7 +591,6 @@ function swipermidsize(index) {
             slidesPerView: 4,
             spaceBetween: 30,
             slidesPerGroup: 1,
-            // loop: true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipertop-button-next",
@@ -224,7 +608,6 @@ function swipermidsize(index) {
             spaceBetween: 0,
             slidesPerView: index,
             slidesPerGroup: 1,
-            // loop: true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
@@ -232,22 +615,68 @@ function swipermidsize(index) {
             },
         });
     }
-}
 
-//看全部菜單 Swiper
-var swipermenu = new Swiper(".mySwiper-menu", {
-    direction: "horizontal",
-    slidesPerView: 1,
-    spaceBetween: 30,
-    mousewheel: true,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    navigation: {
-        nextEl: ".swipermenu-button-next",
-        prevEl: ".swipermenu-button-prev",
-    },
-});
+    function swiper_sm(item) {
+        //上方選單 類別選擇的swiper
+        var swiper_item_icon = new Swiper(".mySwiper-item-icon", {
+            direction: "horizontal",
+            slidesPerView: 4,
+            loop: true,
+            allowTouchMove: false,
+            on: {
+                click: function () {
+                    if (swiper_item_icon.clickedIndex == 4) {
+                        document.querySelector(".items").innerHTML = "Cookie"
+                        item_index = 0
+                    }
+                    if ((swiper_item_icon.clickedIndex == 1) || (swiper_item_icon.clickedIndex == 5)) {
+                        document.querySelector(".items").innerHTML = "Cakes"
+                        item_index = 1
+                    }
+                    if (swiper_item_icon.clickedIndex == 2) {
+                        document.querySelector(".items").innerHTML = "Other"
+                        item_index = 2
+                    }
+                    if (swiper_item_icon.clickedIndex == 3) {
+                        document.querySelector(".items").innerHTML = "Gift"
+                        item_index = 3
+                    }
+                    swiper_item_icon.slideTo(swiper_item_icon.clickedIndex % 4);
+                    document.querySelector('.swipermid-wrapper').innerHTML = Create_content_sm(item);
+                    swiper_item_icon.updateSlides();
+                },
+
+
+            },
+        });
+        //中間有大圖+說明的swiper
+        var swipermid = new Swiper(".mySwipermid", {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            navigation: {
+                nextEl: ".swipermid-button-next",
+                prevEl: ".swipermid-button-prev",
+            },
+        });
+    }
+
+    //看全部菜單 Swiper
+    var swipermenu = new Swiper(".mySwiper-menu", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: ".swipermenu-button-next",
+            prevEl: ".swipermenu-button-prev",
+        },
+    });
+}
 
 // 幸運餅乾
 function fortuneCookies(item) {

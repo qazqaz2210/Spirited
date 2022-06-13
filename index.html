@@ -72,17 +72,17 @@
                     <div class="nav-line">
 
                     </div>
-                    <a href="#how-to-buy" class="row  align-items-center list-a">
+                    <div href="#" class="row  align-items-center list-a" onclick="to_how_to_buy()">
                         <span class="col text-right text-en">HOW TO BUY</span>
                         <span class="col text-ch">購買方式</span>
-                    </a>
+                    </div>
                     <div class="nav-line">
 
                     </div>
-                    <a href="#about-us" class="row  align-items-center list-a">
+                    <div href="#about-us" class="row align-items-center list-a">
                         <span class="col text-right text-en">ABOUT US</span>
                         <span class="col text-ch">關於我們</span>
-                    </a>
+                    </div>
                     <div class="nav-line">
 
                     </div>
@@ -332,118 +332,17 @@
 
             <!-- 菜單 -->
             <section class="shop w-100 position-relative" id="menu">
-                <div class="shop-main">
-                    <div class="top w-100">
-                        <div class="kanban-bg h-100">
-                            <!-- <img src="./img/menu-board.png" alt="" width="100%" class="position-absolute"> -->
-                            <div class="kanban">
 
-                                <!-- 類別按鈕 -->
-                                <div class="types w-100">
-                                    <div class="cookie-type type" onclick="clickEvent(0)">
-                                        <div class="icon">
-                                            <img src="./img/cookie-icon.svg" alt="" height="100%">
-                                        </div>
-                                        <div>
-                                            <div class="title-en">Cookies</div>
-                                            <div class="title-ch">餅乾</div>
-                                        </div>
-                                    </div>
-                                    <div class="cake-type type" onclick="clickEvent(1)">
-                                        <div class="icon">
-                                            <img src="./img/cake-icon.svg" alt="" height="100%">
-                                        </div>
-                                        <div>
-                                            <div class="title-en">Cakes</div>
-                                            <div class="title-ch">蛋糕</div>
-                                        </div>
-                                    </div>
-                                    <div class="other-type type" onclick="clickEvent(2)">
-                                        <div class="icon">
-                                            <img src="./img/other-icon.svg" alt="" height="100%">
-                                        </div>
-                                        <div>
-                                            <div class="title-en">Others</div>
-                                            <div class="title-ch">其他</div>
-                                        </div>
-                                    </div>
-                                    <div class="gift-type type" onclick="clickEvent(3)">
-                                        <div class="icon">
-                                            <img src="./img/gift-icon.svg" alt="" height="100%">
-                                        </div>
-                                        <div>
-                                            <div class="title-en">Gifts</div>
-                                            <div class="title-ch">禮物</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 細項按鈕 -->
-                                <div class="items w-100">
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 右上的燈 -->
-                        <div class="light h-100">
-                        </div>
-                    </div>
-
-                    <!-- 中間的swiper -->
-                    <div class="mid w-100 h-50">
-
-                    </div>
-
-                    <div class="bot w-100">
-                        <div class="favor">
-                            *口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br>
-                            *Sweetness rating is subjective, since we are
-                            an American bakery, most items will be on the sweeter side</div>
-
-                    </div>
-                    <div class="shop-bottom">
-                        <!-- 按鈕 -->
-                        <div class="menu-btns d-flex">
-                            <!-- 看全部菜單 -->
-                            <div class="whole-menu-btn shop-btn"></div>
-                            <!-- 連到如何購買 -->
-                            <a href="#HowToBuy">
-                                <div class="how-to-buy-btn shop-btn"></div>
-                            </a>
-                        </div>
-                        <!-- 全部菜單的圖片之swiper -->
-                        <div class="w-100 vh-100 position-fixed d-none view-menu">
-                            <div class="view-menu-wrapper mx-auto">
-                                <div class="swiper mySwiper-menu">
-                                    <div class="swiper-wrapper swiper-wrapper-menu">
-                                        <div class="swiper-slide swiper-slide-menu">
-                                            <img src="./img/menu/menu-all.png" alt="" height="100%">
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-menu">
-                                            <img src="./img/menu/menu-cakes.png" alt="" height="100%">
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-menu">
-                                            <img src="./img/menu/menu-other.png" alt="" height="100%">
-                                        </div>
-                                        <div class="swiper-slide swiper-slide-menu">
-                                            <img src="./img/menu/menu-gift.png" alt="" height="100%">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swipermenu-button-next swiper-button-next"></div>
-                            <div class="swipermenu-button-prev swiper-button-prev"></div>
-                        </div>
-                    </div>
-                </div>
             </section>
+
+
         </main>
     </div>
     <div class="phone">
         <div class="phone-cookie">
             <div class="phone-cookie-lax"></div>
         </div>
-        <main>
+        <main class="w-100">
 
             <div class="web-background-phone">
 
@@ -453,7 +352,7 @@
 
                 <div class="web-border-1">
                     <div class="web-border-2">
-                        <div class="web-inside">
+                        <div class="web-inside-phone">
                             <!-- HOW TO BUY -->
                             <section class="how-to-buy-phone" id="how-to-buy">
 
@@ -482,8 +381,8 @@
                                     </div>
 
                                     <div class="how-paper-phone">
-                                        <div class="how-txt how-txt-en">
-                                            <div class="how-txt-en-lax">
+                                        <div class="how-txt how-txt-en-phone">
+                                            <div class="how-txt-en-lax-phone">
                                                 <div class="how-suptitle-en">
                                                     On-site / Reservation
                                                 </div>
@@ -513,8 +412,8 @@
                                             </div>
                                         </div>
 
-                                        <div class="how-txt how-txt-ch">
-                                            <div class="how-txt-ch-lax">
+                                        <div class="how-txt how-txt-ch-phone">
+                                            <div class="how-txt-ch-lax-phone">
                                                 <div class="how-suptitle-ch">
                                                     來店
                                                 </div>
@@ -545,11 +444,11 @@
                             </section>
 
                             <!-- ABOUT US -->
-                            <section class="about-us">
-                                <div class="about-us-lax">
+                            <section class="about-us-phone">
+                                <div class="about-us-lax-phone">
 
                                     <div class="about-bag-1">
-                                        <div class="about-bag-lax">
+                                        <div class="about-bag-lax-phone">
                                             <div class="about-cookie"></div>
 
                                             <div class="about-bag-2">
@@ -664,7 +563,7 @@
 
                 </div>
 
-                <div class="banner-title">
+                <div class="banner-title-phone">
 
                     <div class="banner-en">
                         Let us bring you some energetic, classic American desserts.
@@ -678,7 +577,9 @@
 
             </section>
 
-            <section class="menu">
+            <div style="height:500px;background: #f9e2d2;"></div>
+            <section class="shop-phone w-100 position-relative" id="menu_phone">
+
             </section>
 
         </main>
