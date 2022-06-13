@@ -1,0 +1,2678 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 10000vh;
+}
+
+body .a,
+body a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-btn {
+  width: 4rem;
+  height: 4rem;
+  top: 1rem;
+  right: 1rem;
+  z-index: 21;
+  cursor: pointer;
+}
+
+.menu-btn .menu-btn-line {
+  width: 2.5rem;
+  height: 0.25rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.menu-btn .menu-btn-line-light {
+  background: #ffffe8;
+}
+
+.menu-btn .menu-btn-line-dark {
+  background: #5d412e;
+}
+
+.menu-btn .menu-btn-line-top {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+  width: 3rem;
+}
+
+.menu-btn .menu-btn-line-bottom {
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+  width: 2rem;
+}
+
+#menu-btn:checked ~ .menu-btn .menu-btn-line-top {
+  width: 2rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-btn .menu-btn-line-center {
+  width: 2rem;
+  opacity: 0;
+}
+
+#menu-btn:checked ~ .menu-btn .menu-btn-line-bottom {
+  width: 2rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+nav {
+  z-index: 20;
+  top: 0;
+  opacity: 0;
+  background: #5f3217;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+nav .nav-border {
+  margin: auto;
+  background-image: url(../img/nav-border.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1600px;
+  height: 900px;
+  padding: 7% 0% 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-border .nav-content {
+  width: 600px;
+}
+
+nav .nav-border .nav-content a {
+  color: #eca97f;
+}
+
+nav .nav-border .nav-content a .text-en {
+  font-family: "Volkhov", serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1450px) {
+  nav .nav-border .nav-content a .text-en {
+    font-family: "Volkhov", serif;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  nav .nav-border .nav-content a .text-en {
+    font-family: "Volkhov", serif;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+nav .nav-border .nav-content a .text-ch {
+  margin-left: 30px;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  text-align: start;
+  line-height: 2.5rem;
+}
+
+@media screen and (max-width: 1350px) {
+  nav .nav-border .nav-content a .text-ch {
+    font-family: "Noto Serif TC", serif;
+    font-size: 1rem;
+    text-align: center;
+    text-align: start;
+  }
+}
+
+nav .nav-border .nav-content .nav-line {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 250px;
+  height: 12px;
+  background-image: url(../img/nav-line.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav .nav-border aside a {
+  width: 4.125rem;
+  height: 4.125rem;
+  margin: 1rem;
+}
+
+.web {
+  width: 100%;
+  height: 100%;
+}
+
+.web main .shop {
+  width: 100%;
+  height: 150vh;
+  background-color: #f9e2d2;
+}
+
+.web main .shop .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.web main .shop .swipermid-button-prev::after,
+.web main .shop .swipermid-button-next::after,
+.web main .shop .swipertop-button-prev::after,
+.web main .shop .swipertop-button-next::after,
+.web main .shop .swipermenu-button-prev::after,
+.web main .shop .swipermenu-button-next::after {
+  display: none;
+}
+
+.web main .shop .swiper-button-prev {
+  background-image: url(../img/swiper-light-prev.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.web main .shop .swiper-button-next {
+  background-image: url(../img/swiper-light-next.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.web main .shop .shop-main {
+  width: 100%;
+  height: 100vh;
+}
+
+.web main .shop .shop-main .top {
+  width: 100%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.web main .shop .shop-main .top .kanban-bg {
+  width: 95%;
+  max-width: 1150px;
+  background-image: url(../img/menu-board.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  padding: 4% 8% 2% 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban {
+  width: 95%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .types .type {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  color: #ffffe8;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .types .type .icon {
+  height: 65px;
+  width: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.5rem;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-en {
+  font-family: "Lobster", cursive;
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .icon {
+    height: 55px;
+    width: 55px;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-en {
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-ch {
+    font-family: "Noto Serif TC", serif;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 799px) {
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .icon {
+    height: 40px;
+    width: 40px;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-en {
+    font-family: "Lobster", cursive;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .types .type .title-ch {
+    font-family: "Noto Serif TC", serif;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #ffffe8;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide {
+  cursor: pointer;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-en {
+  height: 1.875rem;
+  font-family: "Lobster", cursive;
+  font-size: 1.875rem;
+  text-align: center;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-en-sp {
+  height: 1.875rem;
+  font-family: "Lobster", cursive;
+  font-size: 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-en {
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-ch {
+    font-family: "Noto Serif TC", serif;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  .web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-en-sp {
+    font-family: "Lobster", cursive;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .mySwiper .swiper-wrapper .swiper-slide .item-en {
+    font-family: "Lobster", cursive;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .swipertop-button-next {
+  right: -1.25rem;
+}
+
+.web main .shop .shop-main .top .kanban-bg .kanban .items .swiper-item .swipertop-button-prev {
+  left: -1.25rem;
+}
+
+.web main .shop .shop-main .top .light {
+  width: 40%;
+  background-image: url(../img/light.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@media all and (max-width: 1599px) {
+  .web main .shop .shop-main .top .light {
+    display: none;
+  }
+}
+
+@media all and (max-width: 1599px) {
+  .web main .shop .shop-main .top {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-main .top {
+    height: 250px;
+  }
+}
+
+@media all and (max-width: 799px) {
+  .web main .shop .shop-main .top {
+    height: 200px;
+  }
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  overflow-x: clip;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-pic img {
+  width: 365px;
+  height: 365px;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info {
+  width: 400px;
+  height: 365px;
+  margin-left: 30px;
+  margin-right: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name {
+  margin-bottom: 20px;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-name-en {
+  font-family: "Lobster", cursive;
+  font-size: 2.25rem;
+  text-align: center;
+  line-height: 2rem;
+  text-align: start;
+  margin-bottom: 0.5rem;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-name-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-sweet {
+  font-family: "Noto Serif TC", serif;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-sweet .sweet-round {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-sweet .sweet-solid {
+  background-color: #a67c52;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-name .item-sweet .sweet-hollow {
+  background-color: #c6c5af;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .item-txt-ch-1 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+  width: 100%;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .item-txt-ch-2 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+  width: 100%;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .item-txt-en {
+  font-size: 1rem;
+  font-family: "Volkhov", serif;
+  font-style: italic;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-btn {
+  cursor: pointer;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-btn .btn-ch {
+  font-family: "Noto Serif TC", serif;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-btn .btn-en {
+  font-family: "Volkhov", serif;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-btn:hover ~ .composition-content {
+  display: block;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-content {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  top: 100%;
+  background: #fff;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-content .composition-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+  width: 100%;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .composition-content .composition-content-en {
+  font-size: 1rem;
+  font-family: "Volkhov", serif;
+  font-style: italic;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-btn {
+  cursor: pointer;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-btn .btn-ch {
+  font-family: "Noto Serif TC", serif;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-btn .btn-en {
+  font-family: "Volkhov", serif;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-btn:hover ~ .preservation-content {
+  display: block;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-content {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  top: 100%;
+  background: #fff;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-content .preservation-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+  width: 100%;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid .swipermid-wrapper .item-card .item-info .item-content .preservation-content .preservation-content-en {
+  font-size: 1rem;
+  font-family: "Volkhov", serif;
+  font-style: italic;
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid-button-next {
+  width: 50px;
+  height: 57px;
+  right: 3rem;
+  background-image: url(../img/swiper-dark-next.svg);
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid-button-prev {
+  width: 50px;
+  height: 57px;
+  left: 3rem;
+  background-image: url(../img/swiper-dark-prev.svg);
+}
+
+.web main .shop .shop-main .mid .item-mid .swipermid-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.web main .shop .shop-main .bot {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.web main .shop .shop-main .bot .favor {
+  margin-right: 50px;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+  top: -2.5rem;
+  right: 0rem;
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-main .bot {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .web main .shop .shop-main .bot .favor {
+    margin-right: 0px;
+  }
+}
+
+.web main .shop .shop-bottom {
+  width: 100%;
+  height: 65vh;
+  padding-top: 20px;
+  background-image: url(../img/menu-bottom.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.web main .shop .shop-bottom .menu-btns .shop-btn {
+  width: 275px;
+  height: 95px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-bottom .menu-btns .shop-btn {
+    width: 250px;
+    height: 70px;
+  }
+}
+
+.web main .shop .shop-bottom .menu-btns .whole-menu-btn {
+  margin-right: 5rem;
+  background-image: url(../img/btn-whole-menu.svg);
+}
+
+.web main .shop .shop-bottom .menu-btns .how-to-buy-btn {
+  margin-right: 10rem;
+  background-image: url(../img/btn-how-to-buy.svg);
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-bottom .menu-btns .how-to-buy-btn {
+    margin-right: 0rem;
+  }
+}
+
+.web main .shop .shop-bottom .view-menu {
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  z-index: 21;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.web main .shop .shop-bottom .view-menu .view-menu-wrapper {
+  width: 750px;
+  height: 100%;
+}
+
+.web main .shop .shop-bottom .view-menu .view-menu-wrapper .swiper-slide-menu {
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 999px) {
+  .web main .shop .shop-bottom {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.web main .web-background {
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  position: fixed;
+  background-color: #40281b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .web-background .web-title {
+  width: 100%;
+  height: 15%;
+  font-family: "Volkhov", serif;
+  font-size: 4rem;
+  text-align: center;
+  text-align: start;
+  color: #f4d4bd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .web-background .web-border-1 {
+  width: 95%;
+  height: 85%;
+  border: #f4d4bd solid 2px;
+  border-bottom: 0px;
+  padding: 5px 5px 0px 5px;
+}
+
+.web main .web-background .web-border-1 .web-border-2 {
+  height: 100%;
+  border: #f4d4bd solid 1px;
+  border-bottom: 0px;
+  padding: 25px 25px 0px 25px;
+}
+
+.web main .web-background .web-border-1 .web-border-2 .web-inside {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  background-image: url(../img/heart-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.web main .news {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 12;
+}
+
+.web main .news .news-border {
+  width: 1175px;
+  height: 760px;
+  background-image: url(../img/news-border.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5rem;
+}
+
+.web main .news .news-border .news-logo {
+  width: 260px;
+  height: 260px;
+  margin-top: 2rem;
+}
+
+.web main .news .news-border .news-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.web main .news .news-border .news-title .news-line {
+  width: 30%;
+  height: 2px;
+  background-color: #5d412e;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.web main .news .news-border .news-title .news-txt {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #5d412e;
+}
+
+.web main .news .news-border .news-en {
+  font-family: "Volkhov", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 1rem;
+}
+
+.web main .news .news-border .news-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 2rem;
+}
+
+.web main .news .news-border .news-btn {
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/btn-X.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.web main .banner {
+  z-index: 11;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .banner .banner-animation {
+  width: 100%;
+}
+
+.web main .banner .banner-animate {
+  width: 100%;
+  height: 70vh;
+  padding-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.web main .banner .banner-animate .animate-1 {
+  width: 1040px;
+  height: 500px;
+  background-image: url(../img/animate-ray.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 10%;
+}
+
+.web main .banner .banner-animate .animate-2 {
+  width: 1040px;
+  height: 300px;
+  -webkit-clip-path: ellipse(500px 150px at 50% 50%);
+          clip-path: ellipse(500px 150px at 50% 50%);
+  background: radial-gradient(#8a4418, #8a4418, #fff);
+  position: absolute;
+  bottom: 5%;
+}
+
+.web main .banner .banner-animate .animate-3 {
+  width: 1550px;
+  height: 800px;
+  position: absolute;
+  bottom: 2%;
+  overflow: hidden;
+}
+
+.web main .banner .banner-animate .animate-3 .animate-4 {
+  width: 500px;
+  height: 525px;
+  background-image: url(../img/animate-cookie.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: calc(50% - 250px);
+  bottom: 3%;
+}
+
+.web main .banner .banner-title .banner-en {
+  font-family: "Volkhov", serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 0.5rem;
+}
+
+.web main .banner .banner-title .banner-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #5d412e;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .banner {
+    display: none;
+  }
+}
+
+.web main .fortune {
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  display: none;
+}
+
+.web main .fortune .fortune-pop-1 {
+  width: 550px;
+  height: 550px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 15%;
+  left: 15%;
+}
+
+.web main .fortune .fortune-pop-1 img {
+  width: 95%;
+  height: 95%;
+  z-index: 13;
+}
+
+.web main .fortune .fortune-pop-1 .fortune-pop-2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.web main .fortune .fortune-pop-1 .fortune-pop-2 .fortune-pop-3 {
+  width: 65px;
+  height: 65px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+}
+
+.web main .fortune .fortune-pop-1 .fortune-heart {
+  width: 100px;
+  height: 120px;
+  background-image: url(../img/heart.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: calc(50% - 60px);
+  left: calc(50% - 50px);
+  z-index: 13;
+}
+
+.web main .how-to-buy {
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  padding: 100px 64px 0px 64px;
+  display: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+.web main .how-to-buy .how-paper {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/how-paper.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0%;
+  left: -30%;
+}
+
+.web main .how-to-buy .how-title {
+  width: 160px;
+  height: 100%;
+  background-image: url(../img/how-to-buy.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy .how-title {
+    width: 130px;
+  }
+}
+
+.web main .how-to-buy .how-txt {
+  width: 40%;
+  height: 100%;
+  color: #40281b;
+  margin-top: 4rem;
+  margin-right: auto;
+}
+
+.web main .how-to-buy .how-txt .how-txt-en-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.web main .how-to-buy .how-txt .how-txt-en-lax .how-suptitle-en {
+  font-family: "Volkhov", serif;
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+  text-align: start;
+  margin-bottom: 0.25rem;
+}
+
+.web main .how-to-buy .how-txt .how-txt-en-lax .how-content-en {
+  font-family: "Volkhov", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  font-style: italic;
+  text-align: start;
+  margin-bottom: 4rem;
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy .how-txt .how-txt-en-lax .how-content-en {
+    margin-bottom: 3rem;
+  }
+}
+
+.web main .how-to-buy .how-txt .how-txt-ch-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.web main .how-to-buy .how-txt .how-txt-ch-lax .how-suptitle-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 2rem;
+  text-align: center;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 0.25rem;
+}
+
+.web main .how-to-buy .how-txt .how-txt-ch-lax .how-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy .how-txt {
+    width: 50%;
+  }
+}
+
+.web main .how-to-buy .how-circle {
+  width: 460px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .how-to-buy .how-circle .how-pop {
+  width: 460px;
+  height: 460px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .how-to-buy .how-circle .how-pop .btn-ask {
+  width: 180px;
+  height: 80px;
+  background-image: url(../img/btn-ask.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 12;
+}
+
+.web main .how-to-buy .how-circle .how-pop .pop-line {
+  width: 200px;
+  height: 20px;
+  background-image: url(../img/pop-line.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 2rem;
+  z-index: 12;
+}
+
+.web main .how-to-buy .how-circle .how-pop .btn-reserve {
+  width: 180px;
+  height: 80px;
+  background-image: url(../img/btn-reserve.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 12;
+}
+
+.web main .how-to-buy .how-circle .how-pop .pop-triangle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: #40281b;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
+          clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
+  bottom: 0%;
+  left: 5%;
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy .how-circle .how-pop {
+    width: 350px;
+    height: 350px;
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy .how-circle {
+    width: 400px;
+  }
+}
+
+@media all and (max-width: 1599px) {
+  .web main .how-to-buy {
+    padding: 100px 24px 0px 24px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .web main .how-to-buy {
+    display: none;
+  }
+}
+
+.web main .about-us {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.web main .about-us .about-us-lax {
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  background-image: url(../img/about-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 100px 100px 0 0;
+}
+
+.web main .about-us .about-us-lax .about-bag-1 {
+  width: 90%;
+  height: 90%;
+  background-image: url(../img/bag-1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-cookie {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bag-cookie.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  z-index: 13;
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-bag-2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bag-2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: 14;
+  position: absolute;
+  padding: 0 15% 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-title {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  text-align: center;
+  -webkit-transform: rotateZ(-35deg);
+          transform: rotateZ(-35deg);
+  margin-bottom: 18rem;
+}
+
+@media all and (max-width: 1399px) {
+  .web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-title {
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 16rem;
+  }
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 2rem;
+  margin-bottom: 4rem;
+  font-style: italic;
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content .about-content-en {
+  font-family: "Volkhov", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  text-align: start;
+  margin-bottom: 4rem;
+}
+
+@media all and (max-width: 1399px) {
+  .web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content .about-content-en {
+    font-family: "Volkhov", serif;
+    font-size: 1rem;
+    text-align: center;
+    text-align: start;
+  }
+}
+
+.web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content .about-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  text-align: start;
+}
+
+@media all and (max-width: 1399px) {
+  .web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content .about-content-ch {
+    font-family: "Noto Serif TC", serif;
+    font-size: 1rem;
+    text-align: center;
+    text-align: start;
+  }
+}
+
+@media all and (max-width: 1399px) {
+  .web main .about-us .about-us-lax .about-bag-1 .about-bag-2 .about-content {
+    margin-bottom: 2rem;
+  }
+}
+
+.web main .footer {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.web main .footer .footer-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.web main .footer .footer-lax .footer-pic {
+  width: 100%;
+  height: calc(100% - 110px);
+  background-image: url(../img/footer-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: calc(100% - 200px);
+  }
+}
+
+.web main .footer .footer-lax .footer-info {
+  width: 100%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #40281b;
+}
+
+.web main .footer .footer-lax .footer-info .footer-icons {
+  margin-right: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.web main .footer .footer-lax .footer-info .footer-icons .icon-fb {
+  width: 65px;
+  height: 65px;
+  background-image: url(../img/icon-fb.svg);
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-icons .icon-fb {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.web main .footer .footer-lax .footer-info .footer-icons .icon-ig {
+  width: 65px;
+  height: 65px;
+  background-image: url(../img/icon-ig.svg);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-icons .icon-ig {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.web main .footer .footer-lax .footer-info .footer-icons .icon-map {
+  width: 65px;
+  height: 65px;
+  background-image: url(../img/icon-map.svg);
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-icons .icon-map {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media all and (max-width: 1349px) {
+  .web main .footer .footer-lax .footer-info .footer-icons {
+    margin-right: 5rem;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-icons {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.web main .footer .footer-lax .footer-info .footer-add {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  text-align: left;
+  color: #9c6a4e;
+  line-height: 1;
+  margin-right: 5rem;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-add {
+    font-family: "Noto Serif TC", serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-right: 0rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.web main .footer .footer-lax .footer-info .footer-time {
+  font-size: 1.5rem;
+  color: #9c6a4e;
+  line-height: 1;
+  margin-right: 10rem;
+}
+
+.web main .footer .footer-lax .footer-info .footer-time .footer-time-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+}
+
+.web main .footer .footer-lax .footer-info .footer-time .footer-time-en {
+  font-family: "Volkhov", serif;
+  font-size: 1rem;
+  text-align: center;
+  text-align: start;
+}
+
+@media all and (max-width: 1349px) {
+  .web main .footer .footer-lax .footer-info .footer-time {
+    margin-right: 5rem;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-time {
+    margin-right: 0rem;
+    text-align: center;
+  }
+}
+
+.web main .footer .footer-lax .footer-info .footer-back-icon {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/icon-back.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info .footer-back-icon {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media all and (max-width: 1199px) {
+  .web main .footer .footer-lax .footer-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 200px;
+  }
+}
+
+.phone {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .phone-cookie {
+  width: 700px;
+  height: 700px;
+  position: fixed;
+  z-index: 14;
+}
+
+.phone .phone-cookie .phone-cookie-lax {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bag-cookie.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.phone .web-background {
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  position: fixed;
+  background-color: #40281b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone .web-background .web-title {
+  width: 100%;
+  height: 15%;
+  font-family: "Volkhov", serif;
+  font-size: 4rem;
+  text-align: center;
+  text-align: start;
+  color: #f4d4bd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone .web-background .web-border-1 {
+  width: 95%;
+  height: 85%;
+  border: #f4d4bd solid 2px;
+  border-bottom: 0px;
+  padding: 5px 5px 0px 5px;
+}
+
+.phone .web-background .web-border-1 .web-border-2 {
+  height: 100%;
+  border: #f4d4bd solid 1px;
+  border-bottom: 0px;
+  padding: 25px 25px 0px 25px;
+}
+
+.phone .web-background .web-border-1 .web-border-2 .web-inside {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px 100px 0 0;
+  background-image: url(../img/heart-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: visible;
+}
+
+.phone .news {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 12;
+}
+
+.phone .news .news-border {
+  width: 95%;
+  background-image: url(../img/news-border.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 0.5rem;
+}
+
+.phone .news .news-border .news-logo {
+  width: 20%;
+  margin-top: 0.75rem;
+}
+
+.phone .news .news-border .news-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.phone .news .news-border .news-title .news-line {
+  width: 30%;
+  height: 2px;
+  background-color: #5d412e;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.phone .news .news-border .news-title .news-txt {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  text-align: center;
+  color: #5d412e;
+}
+
+.phone .news .news-border .news-en {
+  font-family: "Volkhov", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 0.5rem;
+}
+
+.phone .news .news-border .news-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 0.7rem;
+}
+
+.phone .news .news-border .news-btn {
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/btn-X.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+
+.phone .banner {
+  z-index: 11;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone .banner .banner-animation {
+  width: 100%;
+}
+
+.phone .banner .banner-animate {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.phone .banner .banner-animate .animate-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/animate-ray-phone.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0%;
+  top: 30%;
+}
+
+.phone .banner .banner-animate .animate-2 {
+  width: 90%;
+  height: 50vw;
+  -webkit-clip-path: ellipse(50% 30% at 50% 50%);
+          clip-path: ellipse(50% 30% at 50% 50%);
+  background: radial-gradient(#8a4418, #8a4418, #fff);
+  position: absolute;
+  left: 5%;
+  top: 55%;
+}
+
+.phone .banner .banner-animate .animate-3 {
+  width: 50%;
+  height: 50vw;
+  background-image: url(../img/animate-cookie.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 25%;
+  top: 40%;
+}
+
+.phone .banner .banner-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.phone .banner .banner-title .banner-en {
+  width: 150%;
+  font-family: "Volkhov", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #5d412e;
+  margin-bottom: 1rem;
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
+}
+
+.phone .banner .banner-title .banner-ch {
+  width: 150%;
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #5d412e;
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
+}
+
+.phone .menu {
+  width: 100%;
+  height: 100vh;
+  background-color: #bb0000;
+  position: relative;
+}
+
+.phone .how-to-buy {
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  padding: 50px 32px 0px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  display: none;
+}
+
+.phone .how-to-buy .how-to-buy-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune {
+  width: 100%;
+  height: 50%;
+  z-index: 12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune .fortune-pop-1 {
+  width: 250px;
+  height: 250px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0%;
+  left: 0%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune .fortune-pop-1 img {
+  width: 95%;
+  height: 95%;
+  z-index: 13;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune .fortune-pop-1 .fortune-pop-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune .fortune-pop-1 .fortune-pop-2 .fortune-pop-3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: absolute;
+  bottom: -30%;
+  right: -30%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .fortune .fortune-pop-1 .fortune-heart {
+  width: 100px;
+  height: 120px;
+  background-image: url(../img/heart.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 10%;
+  left: 105%;
+  z-index: 13;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-title {
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/how-to-buy.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 65%;
+  right: -15%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle .how-pop {
+  width: 250px;
+  height: 250px;
+  border-radius: 999rem;
+  background-color: #40281b;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle .how-pop .btn-ask {
+  width: 100px;
+  height: 50px;
+  background-image: url(../img/btn-ask.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 12;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle .how-pop .pop-line {
+  width: 200px;
+  height: 20px;
+  background-image: url(../img/pop-line.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  z-index: 12;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle .how-pop .btn-reserve {
+  width: 100px;
+  height: 50px;
+  background-image: url(../img/btn-reserve.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 12;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-circle .how-pop .pop-triangle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: #40281b;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
+          clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
+  bottom: 0%;
+  left: 5%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper {
+  width: 684px;
+  height: 900px;
+  background-image: url(../img/how-paper.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 70%;
+  right: -5%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt {
+  color: #40281b;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-en-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-en-lax .how-suptitle-en {
+  font-family: "Volkhov", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  font-style: italic;
+  text-align: start;
+  margin-bottom: 0.5rem;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-en-lax .how-content-en {
+  font-family: "Volkhov", serif;
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: italic;
+  text-align: start;
+  margin-bottom: 2.5rem;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-ch-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-ch-lax .how-suptitle-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 0.55rem;
+}
+
+.phone .how-to-buy .how-to-buy-lax .how-paper .how-txt .how-txt-ch-lax .how-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.phone .about-us {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.phone .about-us .about-us-lax {
+  width: 100%;
+  height: 100%;
+  padding-left: 10%;
+  background-image: url(../img/about-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 100px 100px 0 0;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax {
+  width: 700px;
+  height: 700px;
+  background-image: url(../img/usbag-1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -5%;
+  left: -40%;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-cookie {
+  width: 700px;
+  height: 700px;
+  background-image: url(../img/uscookie-1.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-bag-2 {
+  width: 700px;
+  height: 700px;
+  background-image: url(../img/usbag-2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-bag-2 .about-title {
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-transform: rotateZ(-35deg);
+          transform: rotateZ(-35deg);
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-bag-2 .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  top: 53%;
+  left: 35%;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-bag-2 .about-content .about-content-en {
+  font-family: "Volkhov", serif;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.phone .about-us .about-us-lax .about-bag-1 .about-bag-lax .about-bag-2 .about-content .about-content-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+  text-align: left;
+}
+
+.phone .footer {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.phone .footer .footer-lax {
+  width: 100%;
+  height: 100%;
+}
+
+.phone .footer .footer-lax .footer-pic {
+  width: 100%;
+  height: 50%;
+  background-image: url(../img/footer-bg.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px 100px 0 0;
+}
+
+.phone .footer .footer-lax .footer-info {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #40281b;
+}
+
+.phone .footer .footer-lax .footer-info .footer-back-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/icon-back.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-add {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #9c6a4e;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-time {
+  color: #9c6a4e;
+  line-height: 1;
+  margin-bottom: 2.5rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-time .footer-time-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-time .footer-time-en {
+  font-family: "Volkhov", serif;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.phone .footer .footer-lax .footer-info .footer-number {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: #9c6a4e;
+  margin-bottom: 2rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.phone .footer .footer-lax .footer-info .footer-icons .icon-fb {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/icon-fb.svg);
+}
+
+.phone .footer .footer-lax .footer-info .footer-icons .icon-ig {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/icon-ig.svg);
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.phone .footer .footer-lax .footer-info .footer-icons .icon-map {
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/icon-map.svg);
+}
+/*# sourceMappingURL=index.css.map */

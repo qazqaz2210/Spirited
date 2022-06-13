@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- https://developer.mozilla.org/zh-TW/docs/Web/API/window/requestAnimationFrame -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 網頁標題 -->
+    <title>Spirited</title>
+
+    <!-- boostrap的CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Noto+Serif+TC:wght@600&amp;family=Volkhov&amp;family=Volkhov:ital@1&display=swapdisplay=swap"
+        rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- 自己撰寫的CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!-- 漢堡條(選單按鈕) -->
+    <div>
+        <input type="checkbox" id="menu-btn" class="d-none">
+        <label class="menu-btn position-fixed d-flex flex-column justify-content-center align-items-end" for="menu-btn">
+            <div class="menu-btn-line position-absolute menu-btn-line-top menu-btn-line-light"></div>
+            <div class="menu-btn-line position-absolute menu-btn-line-center menu-btn-line-light"></div>
+            <div class="menu-btn-line position-absolute menu-btn-line-bottom menu-btn-line-light"></div>
+        </label>
+    </div>
+    <!-- 選單列 -->
+    <nav class="w-100 vh-100 d-none position-fixed">
+        <div class="w-100 h-100 d-flex justify-content-center align-items-center">
+            <section class="nav-border">
+                <div class="nav-content">
+                    <a href="#menu" class="row align-items-center" onclick="clicklinkEvent(0)">
+                        <span class="col text-right text-en">COOKIES</span>
+                        <span class="col text-ch">餅 乾</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                    <a href="#menu" class="row  align-items-center" onclick="clicklinkEvent(1)">
+                        <span class="col text-right text-en">CAKES</span>
+                        <span class="col text-ch">蛋 糕</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                    <a href="#menu" class="row  align-items-center" onclick="clicklinkEvent(2)">
+                        <span class="col text-right text-en">ELSE</span>
+                        <span class="col text-ch">其 他</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                    <a href="#menu" class="row  align-items-center" onclick="clicklinkEvent(3)">
+                        <span class="col text-right text-en">GIFTS</span>
+                        <span class="col text-ch">禮 盒</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                    <a href="#how-to-buy" class="row  align-items-center list-a">
+                        <span class="col text-right text-en">HOW TO BUY</span>
+                        <span class="col text-ch">購買方式</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                    <a href="#about-us" class="row  align-items-center list-a">
+                        <span class="col text-right text-en">ABOUT US</span>
+                        <span class="col text-ch">關於我們</span>
+                    </a>
+                    <div class="nav-line">
+
+                    </div>
+                </div>
+
+                <aside class="d-flex justify-content-center align-items-center">
+                    <a href="https://www.facebook.com/spiritedbakery" target="_blank">
+                        <img src="./img/icon-fb.svg" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/spiritedbakery/" target="_blank">
+                        <img src="./img/icon-ig.svg" alt="">
+                    </a>
+                    <a href="https://goo.gl/maps/KdQhEnhPbQ3TkpTZ9" target="_blank">
+                        <img src="./img/icon-map.svg" alt="">
+                    </a>
+                </aside>
+            </section>
+        </div>
+
+    </nav>
+    <div class="web">
+        <!-- 主區塊 -->
+        <main class="w-100">
+
+            <!-- 框 + 幸運餅乾 + HOW TO BUY + ABOUT US + FOOTER -->
+            <div class="web-background">
+
+                <div class="web-title">
+                    SPIRITED
+                </div>
+
+                <div class="web-border-1">
+                    <div class="web-border-2">
+                        <div class="web-inside">
+
+                            <!-- 幸運餅乾 -->
+                            <section class="fortune">
+                                <div class="fortune-pop-1">
+                                    <img src="./img/photo/Macadamia_white_chocolate.png" alt="" class="fortune_img">
+                                    <div class="fortune-pop-2">
+                                        <div class="fortune-pop-3">
+                                        </div>
+                                    </div>
+                                    <div class="fortune-heart"></div>
+                                </div>
+                            </section>
+
+                            <!-- HOW TO BUY -->
+                            <section class="how-to-buy" id="how-to-buy">
+                                <div class="how-paper"></div>
+                                <div class="how-title"></div>
+                                <div class="how-txt how-txt-en">
+                                    <div class="how-txt-en-lax">
+                                        <div class="how-suptitle-en">
+                                            On-site / Reservation
+                                        </div>
+                                        <div class="how-content-en">
+                                            Our products are limited.<br>
+                                            Booking desserts on the day ,please call us directly: (04) 2378-0238.
+                                            Otherwise<br>
+                                            please leave a message through FB or IG. We closed on Tuesday and Wednesday.
+                                        </div>
+                                        <div class="how-suptitle-en">
+                                            Special Order
+                                        </div>
+                                        <div class="how-content-en">
+                                            Please ask us through FB or IG message.
+                                        </div>
+                                        <div class="how-suptitle-en">
+                                            Delievery
+                                        </div>
+                                        <div class="how-content-en">
+                                            Please order at least a week previously through IG or FB
+                                            message.<br>
+                                            Huge order need at least 2-3 weeks.<br>
+                                            Spirited Bakery is available on UberEats as well.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="how-txt how-txt-ch">
+                                    <div class="how-txt-ch-lax">
+                                        <div class="how-suptitle-ch">
+                                            來店
+                                        </div>
+                                        <div class="how-content-ch">
+                                            現場購買，手工製做，數量有限<br>
+                                            當天預留：請直接打電話到店裡(04) 2378-0238<br>
+                                            提前預留：請在禮拜二、三公休日之外，私訊 FB或IG
+                                        </div>
+                                        <div class="how-suptitle-ch">
+                                            客製化需求
+                                        </div>
+                                        <div class="how-content-ch">
+                                            請私訊FB或IG詢問
+                                        </div>
+                                        <div class="how-suptitle-ch">
+                                            宅配 / 外送
+                                        </div>
+                                        <div class="how-content-ch">
+                                            請提前⾄少1-2個禮拜，⼤量請提前2-3個禮拜，私訊FB或IG<br>
+                                            在UberEats App上搜尋「Spirited Bakery」，有限定可外送範圍
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="how-circle">
+                                    <div class="how-pop">
+                                        <div class="btn-ask"></div>
+                                        <div class="pop-line"></div>
+                                        <div class="btn-reserve"></div>
+                                        <div class="pop-triangle"></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- <section class="how-to-buy-phone" id="how-to-buy">
+
+                                <div class="fortune-phone">
+                                    <div class="fortune-pop-1">
+                                        <img src="./img/photo/Macadamia_white_chocolate.png" alt="">
+                                        <div class="fortune-pop-2">
+                                            <div class="fortune-pop-3">
+                                            </div>
+                                        </div>
+                                        <div class="fortune-heart-phone"></div>
+                                    </div>
+                                </div>
+
+                                <div class="how-paper-phone"></div>
+                                <div class="how-title-phone"></div>
+                                <div class="how-txt how-txt-en">
+                                    <div class="how-txt-en-lax-phone">
+                                        <div class="how-suptitle-en">
+                                            On-site / Reservation
+                                        </div>
+                                        <div class="how-content-en">
+                                            Our products are limited.<br>
+                                            Booking desserts on the day ,please call us directly: (04) 2378-0238.
+                                            Otherwise<br>
+                                            please leave a message through FB or IG. We closed on Tuesday and Wednesday.
+                                        </div>
+                                        <div class="how-suptitle-en">
+                                            Special Order
+                                        </div>
+                                        <div class="how-content-en">
+                                            Please ask us through FB or IG message.
+                                        </div>
+                                        <div class="how-suptitle-en">
+                                            Delievery
+                                        </div>
+                                        <div class="how-content-en">
+                                            Please order at least a week previously through IG or FB
+                                            message.<br>
+                                            Huge order need at least 2-3 weeks.<br>
+                                            Spirited Bakery is available on UberEats as well.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="how-txt how-txt-ch">
+                                    <div class="how-txt-ch-lax-phone">
+                                        <div class="how-suptitle-ch">
+                                            來店
+                                        </div>
+                                        <div class="how-content-ch">
+                                            現場購買，手工製做，數量有限<br>
+                                            當天預留：請直接打電話到店裡(04) 2378-0238<br>
+                                            提前預留：請在禮拜二、三公休日之外，私訊 FB或IG
+                                        </div>
+                                        <div class="how-suptitle-ch">
+                                            客製化需求
+                                        </div>
+                                        <div class="how-content-ch">
+                                            請私訊FB或IG詢問
+                                        </div>
+                                        <div class="how-suptitle-ch">
+                                            宅配 / 外送
+                                        </div>
+                                        <div class="how-content-ch">
+                                            請提前⾄少1-2個禮拜，⼤量請提前2-3個禮拜，私訊FB或IG<br>
+                                            在UberEats App上搜尋「Spirited Bakery」，有限定可外送範圍
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="how-circle-phone">
+                                    <div class="how-pop">
+                                        <div class="btn-ask"></div>
+                                        <div class="pop-line"></div>
+                                        <div class="btn-reserve"></div>
+                                        <div class="pop-triangle"></div>
+                                    </div>
+                                </div>
+                            </section> -->
+
+
+                            <!-- ABOUT US -->
+                            <section class="about-us">
+                                <div class="about-us-lax">
+
+                                    <div class="about-bag-1">
+                                        <div class="about-cookie"></div>
+
+                                        <div class="about-bag-2">
+
+                                            <div class="about-title">About Us</div>
+
+                                            <div class="about-content">
+                                                <div class="about-content-en">
+                                                    Classic baked goods we miss from America in a<br>
+                                                    cozy corner of Taichung- we hope our desserts give<br>
+                                                    you the strength to be spirited, and remind you of<br>
+                                                    the sweet things in the world.
+                                                </div>
+
+                                                <div class="about-content-ch">
+                                                    從小在美式環境成長的我們，十分懷念正統美式餅乾。<br>
+                                                    所以在台中的街角，開了一間充滿懷舊感的美式店鋪，希望<br>
+                                                    透過這一片片正統美式餅乾，為所有來訪的你/妳帶來滿滿<br>
+                                                    的活力與正能量。
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- FOOTER -->
+
+                            <section class="footer">
+                                <div class="footer-lax">
+                                    <div class="footer-pic">
+                                    </div>
+
+                                    <div class="footer-info">
+
+                                        <div class="footer-icons">
+                                            <a href="https://www.facebook.com/spiritedbakery" target="_blank">
+                                                <div class="icon-fb"></div>
+                                            </a>
+                                            <a href="https://www.instagram.com/spiritedbakery/" target="_blank">
+                                                <div class="icon-ig"></div>
+                                            </a>
+                                            <a href="https://goo.gl/maps/KdQhEnhPbQ3TkpTZ9" target="_blank">
+                                                <div class="icon-map"></div>
+                                            </a>
+                                        </div>
+
+                                        <div class="footer-add">
+                                            台中市西區五權一街47號<br>
+                                            (04) 2378 - 0238
+                                        </div>
+
+                                        <div class="footer-time">
+                                            <div class="footer-time-ch">
+                                                12:00 - 20:00 　週二、三公休
+                                            </div>
+
+                                            <div class="footer-time-en">
+                                                Closed on Tue. & Wed.
+                                            </div>
+                                        </div>
+
+                                        <a href="#">
+                                            <div class="footer-back-icon">
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 最新消息 -->
+            <section class="news">
+                <div class="news-border">
+                    <div class="news-logo"><img src="./img/LOGO.svg" alt=""></div>
+
+                    <div class="news-title">
+                        <div class="news-line"></div>
+                        <div class="news-txt">NEWS</div>
+                        <div class="news-line"></div>
+                    </div>
+
+                    <div class="news-en">Dine-in is currently not available,
+                        <br>we are take-out only!
+                    </div>
+
+                    <div class="news-ch">⽬前無開放內⽤, 只能外帶</div>
+
+                    <div class="news-btn" onclick='closeNews()'><img src="./img/btn-X.svg" alt=""></div>
+
+                </div>
+            </section>
+
+            <!-- BANNER -->
+            <section class="banner">
+
+                <div class="banner-animate" id="banner-animate">
+
+                    <div class="animate-1" id="animate-1"></div>
+                    <div class="animate-2" id="animate-2"></div>
+                    <div class="animate-3" id="animate-3">
+                        <div class="animate-4" id="animate-4">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="banner-title">
+
+                    <div class="banner-en">
+                        Let us bring you some energetic, classic American desserts.
+                    </div>
+                    <div class="banner-ch">
+                        讓我們帶給你充滿活力、正統的美式甜點風味。
+                    </div>
+
+                </div>
+
+            </section>
+            <div style="height:600px;background: #f9e2d2;"></div>
+
+            <!-- 菜單 -->
+            <section class="shop w-100 position-relative" id="menu">
+                <div class="shop-main">
+                    <div class="top w-100">
+                        <div class="kanban-bg h-100">
+                            <!-- <img src="./img/menu-board.png" alt="" width="100%" class="position-absolute"> -->
+                            <div class="kanban">
+
+                                <!-- 類別按鈕 -->
+                                <div class="types w-100">
+                                    <div class="cookie-type type" onclick="clickEvent(0)">
+                                        <div class="icon">
+                                            <img src="./img/cookie-icon.svg" alt="" height="100%">
+                                        </div>
+                                        <div>
+                                            <div class="title-en">Cookies</div>
+                                            <div class="title-ch">餅乾</div>
+                                        </div>
+                                    </div>
+                                    <div class="cake-type type" onclick="clickEvent(1)">
+                                        <div class="icon">
+                                            <img src="./img/cake-icon.svg" alt="" height="100%">
+                                        </div>
+                                        <div>
+                                            <div class="title-en">Cakes</div>
+                                            <div class="title-ch">蛋糕</div>
+                                        </div>
+                                    </div>
+                                    <div class="other-type type" onclick="clickEvent(2)">
+                                        <div class="icon">
+                                            <img src="./img/other-icon.svg" alt="" height="100%">
+                                        </div>
+                                        <div>
+                                            <div class="title-en">Others</div>
+                                            <div class="title-ch">其他</div>
+                                        </div>
+                                    </div>
+                                    <div class="gift-type type" onclick="clickEvent(3)">
+                                        <div class="icon">
+                                            <img src="./img/gift-icon.svg" alt="" height="100%">
+                                        </div>
+                                        <div>
+                                            <div class="title-en">Gifts</div>
+                                            <div class="title-ch">禮物</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 細項按鈕 -->
+                                <div class="items w-100">
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 右上的燈 -->
+                        <div class="light h-100">
+                        </div>
+                    </div>
+
+                    <!-- 中間的swiper -->
+                    <div class="mid w-100 h-50">
+
+                    </div>
+
+                    <div class="bot w-100">
+                        <div class="favor">
+                            *口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br>
+                            *Sweetness rating is subjective, since we are
+                            an American bakery, most items will be on the sweeter side</div>
+
+                    </div>
+                    <div class="shop-bottom">
+                        <!-- 按鈕 -->
+                        <div class="menu-btns d-flex">
+                            <!-- 看全部菜單 -->
+                            <div class="whole-menu-btn shop-btn"></div>
+                            <!-- 連到如何購買 -->
+                            <a href="#HowToBuy">
+                                <div class="how-to-buy-btn shop-btn"></div>
+                            </a>
+                        </div>
+                        <!-- 全部菜單的圖片之swiper -->
+                        <div class="w-100 vh-100 position-fixed d-none view-menu">
+                            <div class="view-menu-wrapper mx-auto">
+                                <div class="swiper mySwiper-menu">
+                                    <div class="swiper-wrapper swiper-wrapper-menu">
+                                        <div class="swiper-slide swiper-slide-menu">
+                                            <img src="./img/menu/menu-all.png" alt="" height="100%">
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-menu">
+                                            <img src="./img/menu/menu-cakes.png" alt="" height="100%">
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-menu">
+                                            <img src="./img/menu/menu-other.png" alt="" height="100%">
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-menu">
+                                            <img src="./img/menu/menu-gift.png" alt="" height="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swipermenu-button-next swiper-button-next"></div>
+                            <div class="swipermenu-button-prev swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="phone">
+        <div class="phone-cookie">
+            <div class="phone-cookie-lax"></div>
+        </div>
+        <main>
+
+            <div class="web-background-phone">
+
+                <div class="web-title">
+                    SPIRITED
+                </div>
+
+                <div class="web-border-1">
+                    <div class="web-border-2">
+                        <div class="web-inside">
+                            <!-- HOW TO BUY -->
+                            <section class="how-to-buy-phone" id="how-to-buy">
+
+                                <div class="how-to-buy-lax-phone">
+
+                                    <div class="fortune-phone">
+                                        <div class="fortune-pop-1">
+                                            <img src="./img/photo/Macadamia_white_chocolate.png" alt="">
+                                            <div class="fortune-pop-2">
+                                                <div class="fortune-pop-3">
+                                                </div>
+                                            </div>
+                                            <div class="fortune-heart"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="how-title-phone"></div>
+
+                                    <div class="how-circle-phone">
+                                        <div class="how-pop">
+                                            <div class="btn-ask"></div>
+                                            <div class="pop-line"></div>
+                                            <div class="btn-reserve"></div>
+                                            <div class="pop-triangle"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="how-paper-phone">
+                                        <div class="how-txt how-txt-en">
+                                            <div class="how-txt-en-lax">
+                                                <div class="how-suptitle-en">
+                                                    On-site / Reservation
+                                                </div>
+                                                <div class="how-content-en">
+                                                    Our products are limited.<br>
+                                                    Booking desserts on the day ,please call us directly: (04)
+                                                    2378-0238.
+                                                    Otherwise
+                                                    please leave a message through FB or IG. We closed on Tuesday and
+                                                    Wednesday.
+                                                </div>
+                                                <div class="how-suptitle-en">
+                                                    Special Order
+                                                </div>
+                                                <div class="how-content-en">
+                                                    Please ask us through FB or IG message.
+                                                </div>
+                                                <div class="how-suptitle-en">
+                                                    Delievery
+                                                </div>
+                                                <div class="how-content-en">
+                                                    Please order at least a week previously through IG or FB
+                                                    message.<br>
+                                                    Huge order need at least 2-3 weeks.<br>
+                                                    Spirited Bakery is available on UberEats as well.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="how-txt how-txt-ch">
+                                            <div class="how-txt-ch-lax">
+                                                <div class="how-suptitle-ch">
+                                                    來店
+                                                </div>
+                                                <div class="how-content-ch">
+                                                    現場購買，手工製做，數量有限<br>
+                                                    當天預留：請直接打電話到店裡(04) 2378-0238<br>
+                                                    提前預留：請在禮拜二、三公休日之外，私訊 FB或IG
+                                                </div>
+                                                <div class="how-suptitle-ch">
+                                                    客製化需求
+                                                </div>
+                                                <div class="how-content-ch">
+                                                    請私訊FB或IG詢問
+                                                </div>
+                                                <div class="how-suptitle-ch">
+                                                    宅配 / 外送
+                                                </div>
+                                                <div class="how-content-ch">
+                                                    請提前⾄少1-2個禮拜，⼤量請提前2-3個禮拜，私訊FB或IG<br>
+                                                    在UberEats App上搜尋「Spirited Bakery」，有限定可外送範圍
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <!-- ABOUT US -->
+                            <section class="about-us">
+                                <div class="about-us-lax">
+
+                                    <div class="about-bag-1">
+                                        <div class="about-bag-lax">
+                                            <div class="about-cookie"></div>
+
+                                            <div class="about-bag-2">
+
+                                                <div class="about-title">About Us</div>
+
+                                                <div class="about-content">
+                                                    <div class="about-content-en">
+                                                        Classic baked goods we miss from<br>
+                                                        America in a cozy corner of Taichung<br>
+                                                        we hope our desserts give you the<br>
+                                                        strength to be spirited, and remind you<br>
+                                                        of the sweet things in the world.
+                                                    </div>
+
+                                                    <div class="about-content-ch">
+                                                        從小在美式環境成長的我們，十分懷念正統美式餅乾。<br>
+                                                        所以在台中的街角，開了一間充滿懷舊感的美式店鋪，<br>
+                                                        希望透過這一片片正統美式餅乾，為所有來訪的你/妳<br>
+                                                        帶來滿滿的活力與正能量。
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- FOOTER -->
+                            <section class="footer-phone">
+                                <div class="footer-lax-phone">
+                                    <div class="footer-pic">
+                                    </div>
+
+                                    <div class="footer-info">
+
+                                        <a href="#">
+                                            <div class="footer-back-icon">
+                                            </div>
+                                        </a>
+
+                                        <div class="footer-add">
+                                            台中市西區五權一街47號
+                                        </div>
+
+                                        <div class="footer-time">
+                                            <div class="footer-time-ch">
+                                                12:00 - 20:00 　週二、三公休
+                                            </div>
+
+                                            <div class="footer-time-en">
+                                                Closed on Tue. & Wed.
+                                            </div>
+                                        </div>
+
+                                        <div class="footer-number">
+                                            (04) 2378 - 0238
+                                        </div>
+
+                                        <div class="footer-icons">
+                                            <a href="https://www.facebook.com/spiritedbakery" target="_blank">
+                                                <div class="icon-fb"></div>
+                                            </a>
+                                            <a href="https://www.instagram.com/spiritedbakery/" target="_blank">
+                                                <div class="icon-ig"></div>
+                                            </a>
+                                            <a href="https://goo.gl/maps/KdQhEnhPbQ3TkpTZ9" target="_blank">
+                                                <div class="icon-map"></div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="news-phone">
+                <div class="news-border">
+                    <div class="news-logo"><img src="./img/LOGO.svg" alt=""></div>
+
+                    <div class="news-title">
+                        <div class="news-line"></div>
+                        <div class="news-txt">NEWS</div>
+                        <div class="news-line"></div>
+                    </div>
+
+                    <div class="news-en">Dine-in is currently not available,
+                        <br>we are take-out only!
+                    </div>
+
+                    <div class="news-ch">⽬前無開放內⽤, 只能外帶</div>
+
+                    <div class="news-btn" onclick='closeNews()'><img src="./img/btn-X.svg" alt=""></div>
+
+                </div>
+            </section>
+
+            <section class="banner-phone">
+
+                <div class="banner-animate" id="banner-animate">
+
+                    <div class="animate-1-phone" id="animate-1"></div>
+                    <div class="animate-2-phone" id="animate-2"></div>
+                    <div class="animate-3-phone" id="animate-3"></div>
+
+                </div>
+
+                <div class="banner-title">
+
+                    <div class="banner-en">
+                        Let us bring you some energetic, classic American desserts.
+                    </div>
+
+                    <div class="banner-ch">
+                        讓我們帶給你充滿活力、正統的美式甜點風味。
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="menu">
+            </section>
+
+        </main>
+    </div>
+
+
+    <!-- boostrap之js -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- lax之JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <!-- 自行撰寫的JS -->
+    <script src="./JS/menu.js"></script>
+    <script src="./JS/other.js"></script>
+    <script src="./JS/scroll.js"></script>
+
+
+</body>
+
+</html>

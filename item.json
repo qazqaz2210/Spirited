@@ -1,0 +1,320 @@
+{
+    "item": [
+        [
+            {
+                "item_en": "Chocolate chip",
+                "item_ch": "巧克力豆",
+                "sweet":3,
+                "introduce_en": "The classic American favorite, we make ours with lots of 60% chocolate chunks",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, chocolate",
+                "introduce_ch":"最經典的軟餅乾口口味，麵團有微微香草味和60%巧克力塊",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，巧克力)",
+                "img": "Chocolate_chip.png"
+            },
+            {
+                "item_en": "Double chocolate",
+                "item_ch": "雙巧克力",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, chocolate, white chocolate",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，巧克力，白巧克力)",
+                "img": "Double_chocolate.png"
+            },
+            {
+                "item_en": "Oatmeal raisin",
+                "item_ch": "燕麥葡萄乾",
+                "sweet":2,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg,bbutter, less than 0.5g alcohol, cinnamon, raisins, oatmeal",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，少於0.5g酒精，肉桂，葡萄乾，燕麥)",
+                "img": "Oatmeal_raisin.png"
+            },
+            {
+                "item_en": "Snickerdoodle",
+                "item_ch": "肉桂糖",
+                "sweet":2,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, cinnamon",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，肉桂)",
+                "img": "Snickerdoodle.png"
+            },
+            {
+                "item_en": "Macadamia white chocolate",
+                "item_ch": "夏威夷果白巧克力",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, macadamia nut, white chocolate",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，夏威夷果，白巧克力)",
+                "img": "Macadamia_white_chocolate.png"
+            },
+            {
+                "item_en": "Peanut butter M&M",
+                "item_ch": "花生醬 M&M",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, coconut, pecans, dates",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，椰子，椰棗，胡桃)",
+                "img": "Peanut_butter_M&M.png"
+            },
+            {
+                "item_en": "Strawberry",
+                "item_ch": "草莓",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, dried strawberries, strawberry chocolate",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，草莓巧克力，草莓)",
+                "img": "Strawberry.png"
+            },
+            {
+                "item_en": "Coconut pecan date",
+                "item_ch": "椰子椰棗胡桃",
+                "sweet":2,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, coconut, pecans, dates",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，椰子，椰棗，胡桃)",
+                "img": "Coconut_pecan_date.png"
+            },
+            {
+                "item_en": "Espresso hazelnut white chocolate",
+                "item_ch": "咖啡榛果白巧克力",
+                "sweet":3,
+                "introduce_en": "",
+                "preservation_en":"Room temperature for 1 week or storing them in the freezer they can be simply defrosted before eati ng",
+                "composition_en":"Includes egg, butter, less than 0.5 alcohol, hazelnuts, white chocolate",
+                "introduce_ch":"",
+                "preservation_ch": "室溫可放一周。天氣溼熱時請冷凍，要吃的時候直接退冰就好囉！",
+                "composition_ch": "蛋奶素(含蛋，奶油，少於0.5g酒精，榛果，咖啡粉)",
+                "img": "Espresso_hazelnut_white_chocolate.png"
+            }
+        ],
+        [
+            {
+                "item_en": "Carrot",
+                "item_ch": "紅蘿蔔",
+                "sweet":3,
+                "introduce_en": "Can’t beat a classic, and our carrot cake is unbeatably moist, with perfectly tangy cream cheese frosting.",
+                "preservation_en":"4 hours at room temperature, 3-4 days refrigerated, 2 weeks frozen",
+                "composition_en":"",
+                "introduce_ch":"美國非常經典的口味，滿滿的紅蘿蔔絲和肉桂香氣融合，內霜帶一點檸檬酸味的奶油乳酪，對亞洲人是比較新鮮的口感，歡迎嘗鮮~",
+                "preservation_ch": "常溫4個小時，冷藏3-4天，冷凍2個禮拜",
+                "composition_ch": "蛋奶素(含蛋，乳製品，小麥，芥花油，肉桂和其他香料)",
+                "img": "Carrot.png"
+            },
+            {
+                "item_en": "Raspberry devil's food",
+                "item_ch": "覆盆子惡魔蛋糕",
+                "sweet":5,
+                "introduce_en": "A rich chocolate delight paired with sweet sour tones of raspberry jam and a crunchy layer of crumble inside",
+                "preservation_en":"4 hours at room temperature, 3-4 days refrigerated, 2 weeks frozen",
+                "composition_en":"(Includes gelatin, egg, dairy, wheat)",
+                "introduce_ch":"邪惡的蛋糕就是巧克力蛋糕體再加上巧克力霜再加上脆脆巧克力片~ 中間的覆盆子果醬讓甜中有一點酸酸的平衡",
+                "preservation_ch": "常溫4個小時，冷藏3-4天，冷凍2個禮拜",
+                "composition_ch": "含吉利丁，蛋，乳製品，小麥",
+                "img": "Raspberry_devil's_food.png"
+            },
+            {
+                "item_en": "Oreo cheesecake",
+                "item_ch": "Oreo乳酪蛋糕",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"2 hours at room temperature, 3-4 days refrigerated, 2 weeks frozen",
+                "composition_en":"Includes gelatin, dairy, wheat",
+                "introduce_ch":"",
+                "preservation_ch": "常溫2個小時，冷藏3-4天，冷凍2個禮拜",
+                "composition_ch": "含吉利丁，乳製品，小麥",
+                "img": "Oreo_cheesecake.png"
+            },
+            {
+                "item_en": "Red velvet cupcakes",
+                "item_ch": "紅絲絨杯子蛋糕",
+                "sweet":4,
+                "introduce_en": "Can’t beat a red velvet cupcake to satisfy that sweet tooth! This crumbly cocoa cake base with a heap of coconut pecan frosting hits just right~",
+                "preservation_en":"4 hours at room temperature, 3-4 days refrigerated, 2 weeks frozen",
+                "composition_en":"",
+                "introduce_ch":"紅絲絨蛋糕是美國很經典有趣的蛋糕口口味，傳統的紅色顏色是用甜菜根做出來的！濕潤的可可蛋糕體加上椰子胡桃糖霜，真是個吃不膩的組合！",
+                "preservation_ch": "常溫4小時，冷藏3-4天，冷凍2個禮拜",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，椰子，胡桃，甜菜根，紅#40食用色素)",
+                "img": "Red_velvet_cupcakes.png"
+            },
+            {
+                "item_en": "Caramel apple cupcakes",
+                "item_ch": "焦糖蘋果杯子蛋糕",
+                "sweet":5,
+                "introduce_en": "Caramel cake + caramel frosting + caramel drizzled on top, with a sweet and sour apple filling inside, a melt-in-your-mouth combination!",
+                "preservation_en":"4 hours at room temperature, 3-4 days refrigerated, 2 weeks frozen",
+                "composition_en":"",
+                "introduce_ch":"焦糖蛋糕體+焦糖霜+焦糖醬，還有裡面酸酸甜甜的蘋果餡，超有秋天的氣氛！",
+                "preservation_ch": "常溫4小時，冷藏3-4天，冷凍2個禮拜",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，芥花油，蘋果，少於1.5g酒精)",
+                "img": "Caramel_apple_cupcakes.png"
+            }
+        ],
+        [
+            {
+                "item_en": "Almond biscotti",
+                "item_ch": "義式杏仁脆片",
+                "sweet":"1",
+                "introduce_en": "",
+                "preservation_en":"Storing in an airtight container 2-3 weeks at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"",
+                "preservation_ch": "保鮮盒裡常溫2-3周",
+                "composition_ch": "蛋奶素 (含蛋, 乳製品, 小麥)",
+                "img": "Almond_biscotti.png"
+            },
+            {
+                "item_en": "Brownies",
+                "item_ch": "布朗尼",
+                "sweet":4,
+                "introduce_en": "",
+                "preservation_en":"Storing in an airtight container 3-4 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"",
+                "preservation_ch": "保鮮盒裡常溫3-4天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥)",
+                "img": "Brownies.png"
+            },
+            {
+                "item_en": "Bourbon fig pound cake",
+                "item_ch": "波本威士忌無花果磅蛋糕",
+                "sweet":1,
+                "introduce_en": "",
+                "preservation_en":"Storing in an airtight container 3-4 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"",
+                "preservation_ch": "保鮮盒裡常溫3-4天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，芥花油，4g酒精，無花果)",
+                "img": "Bourbon_fig_pound_cake.png"
+            },
+            {
+                "item_en": "Banana walnut pound cake",
+                "item_ch": "香蕉核桃磅蛋糕",
+                "sweet":1,
+                "introduce_en": "",
+                "preservation_en":"Storing in an airtight container 3-4 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"",
+                "preservation_ch": "保鮮盒裡常溫3-4天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，芥花油，香蕉，核桃)",
+                "img": "Banana_walnut_pound_cake.png"
+            },
+            {
+                "item_en": "Apple pie",
+                "item_ch": "蘋果派",
+                "sweet":4,
+                "introduce_en": "A good ol’ fashioned apple pie never disappoints!",
+                "preservation_en":"2-3 days at room temperature",
+                "composition_en":"",
+                "introduce_ch":"經典美式蘋果派就是這樣, 裡面面滿滿的蘋果片還有肉肉桂香氣~",
+                "preservation_ch": "常溫2-3天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，肉桂和其他香料)",
+                "img": "Apple_pie.png"
+            },
+            {
+                "item_en": "Tomato galette",
+                "item_ch": "番茄鹹塔",
+                "sweet":0,
+                "introduce_en": "Not a pizza, sorry! Our tomato galette is basil, olives, garlic, parmesan, sun-dried and fresh tomatoes all wrapped up in a heavenly flaky pie crust",
+                "preservation_en":"Storing in an airtight container 2-3 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"這可不是pizza喔！番茄鹹塔是用脆脆酥香的派皮包住羅勒勒，蒜，綠橄欖，日曬番茄乾和新鮮番茄片, 還有帕瑪森起司",
+                "preservation_ch": "保鮮盒裡常溫2-3天",
+                "composition_ch": "五辛素 (含蛋，乳製品，小麥，橄欖，酸豆，蒜，帕瑪森起司，羅勒)",
+                "img": "Tomato_galette.png"
+            },
+            {
+                "item_en": "Southern biscuits",
+                "item_ch": "美國南方比司吉",
+                "sweet":0,
+                "introduce_en": "Our buttery, flaky southern biscuits come with a refreshing scoop of house-made peach jam and whipped honey butter for that delicious salty-sweet combination!",
+                "preservation_en":"3-4 days at room temperature",
+                "composition_en":"",
+                "introduce_ch":"又酥又香的美國南方比司吉有時候會被誤認為是司康，但兩個是不一樣的喔!比司吉酥軟，有淡淡的奶油鹹味，搭配我們自製的蜂蜜奶油和清爽水蜜桃果醬，品嚐鹹和甜的完美組合",
+                "preservation_ch": "常溫3-4天",
+                "composition_ch": "蛋奶素 (含乳製品，小麥)",
+                "img": "Southern_biscuits.png"
+            },
+            {
+                "item_en": "Lemon muffins",
+                "item_ch": "檸檬瑪芬",
+                "sweet":4,
+                "introduce_en": "These sweet and sour lemon muffins taste as good as they look, with a sprinkle of crunchy sugar on top and tangy lemon fragrance in every bite!",
+                "preservation_en":"Storing in an airtight container 3-4 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"酸酸甜甜的檸檬瑪芬，上面灑著脆脆的冰糖，每一口都有濃濃的檸檬香味！",
+                "preservation_ch": "保鮮盒裡常溫3-4天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，芥花油)",
+                "img": "Lemon_muffins.png"
+            },
+            {
+                "item_en": "Raisin bran muffins",
+                "item_ch": "高纖麮皮葡萄乾瑪芬",
+                "sweet":1,
+                "introduce_en": "Pile some pear jam onto these raisin bran muffins for a healthy, hearty, and most importantly, scrumptious breakfast. Each muffin contains up to 6 grams of fiber!",
+                "preservation_en":"Storing in an airtight container 3-4 days at room temperature.",
+                "composition_en":"",
+                "introduce_ch":"在葡萄乾麩皮皮瑪芬上塗一匙果醬(洋梨果醬)，擁有健康又美味的早餐! 一個瑪芬有6公克的膳食纖維喔~",
+                "preservation_ch": "保鮮盒裡常溫3-4天",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，芥花油，麩皮，葡萄乾，雅麻子，柳橙)",
+                "img": "Raisin_bran_muffins.png"
+            },
+            {
+                "item_en": "Cinnamon rolls",
+                "item_ch": "肉桂捲",
+                "sweet":5,
+                "introduce_en": "Our cinnamon rolls are loaded with rich maple glaze, an inspiration from amazing American donuts we still can’t forget",
+                "preservation_en":"2 days at room temperature",
+                "composition_en":"",
+                "introduce_ch":"美式甜點當然不能少了肉桂捲，我們靈感來自於美國的甜甜圈，把香甜的楓糖霜淋淋在肉桂捲上~",
+                "preservation_ch": "常溫2天 (建議盡快吃完口感最佳)",
+                "composition_ch": "蛋奶素 (含蛋，乳製品，小麥，肉桂)",
+                "img": "Cinnamon_rolls.png"
+            }
+        ],
+        [
+            {
+                "item_en": "24pc cookie box",
+                "item_ch": "24pc 餅乾禮盒",
+                "img": "24pc_cookie_box.png"
+            },
+            {
+                "item_en": "12pc cookie box",
+                "item_ch": "12pc 餅乾禮盒",
+                "img": "12pc_cookie_box.png"
+            },
+            {
+                "item_en": "5pc cookie box",
+                "item_ch": "5pc 餅乾禮盒",
+                "img": "5pc_cookie_box.png"
+            },
+            {
+                "item_en": "Individually wrapped cookies",
+                "item_ch": "單獨包裝餅乾",
+                "img": "Individually_wrapped_cookies.png"
+            }
+        ]
+    ]
+}
