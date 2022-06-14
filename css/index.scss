@@ -44,7 +44,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 10000vh;
+    height: 1200vh;
 
     .a,
     a:hover {
@@ -934,7 +934,7 @@ nav {
                 .news-ch {
                     @include Noto-Serif-TC(2.5rem);
                     color: #5d412e;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1rem;
                     @media all and (max-width: 1199px) {
                         @include Noto-Serif-TC(2.25rem);
                     }
