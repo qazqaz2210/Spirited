@@ -111,10 +111,17 @@ news_phone.addEventListener('click', event => {
 
 // 跳轉至HOW TO BUY
 function to_how_to_buy() {
-    window.scrollTo(0, 5000)
+    if (document.body.clientWidth > 599) {
+        window.scrollTo(0, 4500)
+    }
+    else {
+        window.scrollTo(0, 3000)
+    }
+
 }
 
 // 跳轉至ABOUT US
 function to_about_us() {
     window.scrollTo(0, 7000)
+
 }

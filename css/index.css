@@ -173,6 +173,10 @@ nav .nav-border .nav-content a .text-ch {
   }
 }
 
+nav .nav-border .nav-content .list-a {
+  cursor: pointer;
+}
+
 nav .nav-border .nav-content .nav-line {
   margin: auto;
   margin-bottom: 2rem;
