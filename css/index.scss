@@ -2129,16 +2129,8 @@ nav {
         height: 100%;
         z-index: 12;
         padding: 50px 32px 0px 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: start;
         position: relative;
         display: none;
-
-        @media all and (max-width: 1199px) {
-            // display: flex;
-        }
 
         .how-to-buy-lax-phone {
             width: 100%;

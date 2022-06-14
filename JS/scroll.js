@@ -189,17 +189,17 @@ function doSomething(scrollPos) {
             cookie.style = 'display:block'
         } else if (document.documentElement.scrollTop < 3000) {
             background_phone.style = 'position:fixed'
-            buy_phone.style = 'display:flex'
+            buy_phone.style = 'display:block'
             buyen_phone.style = 'display:block'
             buych_phone.style = 'display:none'
             cookie.style = 'display:block'
         } else if (document.documentElement.scrollTop < 4000) {
-            buy_phone.style = 'display:flex'
+            buy_phone.style = 'display:block'
             buyen_phone.style = 'display:blcok'
             buych_phone.style = 'display:blcok'
             cookie.style = 'display:none'
         } else if (document.documentElement.scrollTop < 5000) {
-            buy_phone.style = 'display:flex'
+            buy_phone.style = 'display:block'
             buyen_phone.style = 'display:blcok'
             buych_phone.style = 'display:blcok'
             webinside_phone.style = 'overflow:hidden'

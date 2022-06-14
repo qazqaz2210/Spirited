@@ -658,7 +658,7 @@ function swipermidsize(item) {
         var swipermid = new Swiper(".mySwipermid", {
             spaceBetween: 0,
             slidesPerView: 1,
-            // loop:true,
+            loop:true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
