@@ -22,6 +22,23 @@ body a:hover {
   top: 1rem;
   right: 1rem;
   z-index: 21;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   cursor: pointer;
 }
 
@@ -30,6 +47,7 @@ body a:hover {
   height: 0.25rem;
   -webkit-transition: all 1s;
   transition: all 1s;
+  position: absolute;
 }
 
 .menu-btn .menu-btn-line-light {
@@ -70,6 +88,10 @@ body a:hover {
 }
 
 nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: none;
   z-index: 20;
   top: 0;
   opacity: 0;

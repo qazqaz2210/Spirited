@@ -59,12 +59,16 @@ body {
     top: 1rem;
     right: 1rem;
     z-index: 21;
+    position: fixed;
+    @include flex(column);
+    align-items: flex-end;
     cursor: pointer;
 
     .menu-btn-line {
         width: 2.5rem;
         height: 0.25rem;
         transition: all 1s;
+        position: absolute;
     }
 
     .menu-btn-line-light {
@@ -108,6 +112,10 @@ body {
 }
 // 選單
 nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
     z-index: 20;
     top: 0;
     opacity: 0;
@@ -157,7 +165,7 @@ nav {
                 }
             }
 
-            .list-a{
+            .list-a {
                 cursor: pointer;
             }
 
