@@ -133,7 +133,7 @@
                 "introduce_ch":"邪惡的蛋糕就是巧克力蛋糕體再加上巧克力霜再加上脆脆巧克力片~ 中間的覆盆子果醬讓甜中有一點酸酸的平衡",
                 "preservation_ch": "常溫4個小時，冷藏3-4天，冷凍2個禮拜",
                 "composition_ch": "含吉利丁，蛋，乳製品，小麥",
-                "img": "Raspberry_devil's_food.png"
+                "img": "Raspberry_devil_s_food.png"
             },
             {
                 "item_en": "Oreo cheesecake",
@@ -296,9 +296,9 @@
         ],
         [
             {
-                "item_en": "24pc cookie box",
-                "item_ch": "24pc 餅乾禮盒",
-                "img": "24pc_cookie_box.png"
+                "item_en": "5pc cookie box",
+                "item_ch": "5pc 餅乾禮盒",
+                "img": "5pc_cookie_box.png"
             },
             {
                 "item_en": "12pc cookie box",
@@ -306,14 +306,9 @@
                 "img": "12pc_cookie_box.png"
             },
             {
-                "item_en": "5pc cookie box",
-                "item_ch": "5pc 餅乾禮盒",
-                "img": "5pc_cookie_box.png"
-            },
-            {
-                "item_en": "Individually wrapped cookies",
-                "item_ch": "單獨包裝餅乾",
-                "img": "Individually_wrapped_cookies.png"
+                "item_en": "24pc cookie box",
+                "item_ch": "24pc 餅乾禮盒",
+                "img": "24pc_cookie_box.png"
             }
         ]
     ]

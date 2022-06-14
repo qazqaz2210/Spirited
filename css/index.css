@@ -202,12 +202,6 @@ nav .nav-border aside a {
   background-color: #f9e2d2;
 }
 
-@media all and (max-width: 1199px) {
-  .web main .shop {
-    height: 100vh;
-  }
-}
-
 .web main .shop .swiper {
   width: 100%;
   height: 100%;
@@ -1034,13 +1028,13 @@ nav .nav-border aside a {
 }
 
 .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info {
-  width: 580px;
-  height: 345px;
+  width: 500px;
+  height: 800px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -410px;
+  bottom: -850px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1060,10 +1054,18 @@ nav .nav-border aside a {
   padding: 15px;
 }
 
-@media all and (max-width: 799px) {
-  .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info {
-    width: 490px;
-  }
+.web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips .tips-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.75rem;
+  text-align: center;
+  text-align: left;
+}
+
+.web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips .tips-en {
+  font-family: "Lobster", cursive;
+  font-size: 0.75rem;
+  text-align: center;
+  text-align: left;
 }
 
 .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .info-ch {
@@ -1075,7 +1077,7 @@ nav .nav-border aside a {
 }
 
 .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .info-en {
-  font-family: "Noto Serif TC", serif;
+  font-family: "Lobster", cursive;
   font-size: 1rem;
   text-align: center;
   text-align: left;
@@ -1090,18 +1092,18 @@ nav .nav-border aside a {
 }
 
 .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .description-phone {
-  background-image: url(../img/menu-info-w-M.svg);
+  background-image: url(../img/menu-info-w.svg);
   color: #5d412e;
 }
 
 .web main .shop .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .preservation-phone {
-  background-image: url(../img/menu-info-b-M.svg);
+  background-image: url(../img/menu-info-b.svg);
   color: #ffffe8;
 }
 
 .web main .shop .shop-bottom-phone {
   width: 100%;
-  height: 45vh;
+  height: 100vh;
   padding-top: 5px;
   background-image: url(../img/menu-bottom.png);
   background-position: center;
@@ -2233,6 +2235,7 @@ nav .nav-border aside a {
     font-family: "Volkhov", serif;
     font-size: 1rem;
     text-align: center;
+    text-align: start;
   }
 }
 
@@ -2248,6 +2251,7 @@ nav .nav-border aside a {
     font-family: "Noto Serif TC", serif;
     font-size: 1rem;
     text-align: center;
+    text-align: start;
   }
 }
 
@@ -2416,6 +2420,10 @@ nav .nav-border aside a {
   }
 }
 
+.web main .footer .footer-lax .footer-info .footer-add a {
+  color: #9c6a4e;
+}
+
 .web main .footer .footer-lax .footer-info .footer-time {
   font-size: 1.5rem;
   color: #9c6a4e;
@@ -2477,21 +2485,32 @@ nav .nav-border aside a {
 }
 
 .phone {
+  display: none;
   width: 100%;
   height: 100%;
 }
 
+@media all and (max-width: 599px) {
+  .phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .phone .phone-cookie {
-  width: 700px;
-  height: 700px;
+  width: 300px;
+  height: 300px;
   position: fixed;
   z-index: 14;
+  display: none;
+  left: calc(50% - 150px);
 }
 
 .phone .phone-cookie .phone-cookie-lax {
   width: 100%;
   height: 100%;
-  background-image: url(../img/bag-cookie.png);
+  background-image: url(../img/phone-cookie.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2865,17 +2884,9 @@ nav .nav-border aside a {
   }
 }
 
-@media all and (max-width: 1199px) {
-  .phone .banner-phone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
 .phone .shop-phone {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-color: #f9e2d2;
 }
 
@@ -3178,13 +3189,13 @@ nav .nav-border aside a {
 }
 
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info {
-  width: 345px;
-  height: 345px;
+  width: 400px;
+  height: 800px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -410px;
+  bottom: -750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3202,6 +3213,24 @@ nav .nav-border aside a {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 15px;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips {
+  margin-bottom: 3rem;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips .tips-ch {
+  font-family: "Noto Serif TC", serif;
+  font-size: 0.75rem;
+  text-align: center;
+  text-align: left;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips .tips-en {
+  font-family: "Lobster", cursive;
+  font-size: 0.75rem;
+  text-align: center;
+  text-align: left;
 }
 
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .info-ch {
@@ -3239,7 +3268,7 @@ nav .nav-border aside a {
 
 .phone .shop-phone .shop-bottom-phone {
   width: 100%;
-  height: 45vh;
+  height: 100vh;
   padding-top: 5px;
   background-image: url(../img/menu-bottom.png);
   background-position: center;
@@ -3551,7 +3580,7 @@ nav .nav-border aside a {
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt .how-txt-en-lax-phone .how-suptitle-en {
   font-family: "Volkhov", serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   font-style: italic;
   text-align: start;
@@ -3560,7 +3589,7 @@ nav .nav-border aside a {
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt .how-txt-en-lax-phone .how-content-en {
   font-family: "Volkhov", serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-style: italic;
   text-align: start;
@@ -3574,7 +3603,7 @@ nav .nav-border aside a {
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt .how-txt-ch-lax-phone .how-suptitle-ch {
   font-family: "Noto Serif TC", serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   font-style: italic;
   text-align: left;
@@ -3583,7 +3612,7 @@ nav .nav-border aside a {
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt .how-txt-ch-lax-phone .how-content-ch {
   font-family: "Noto Serif TC", serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   text-align: center;
   font-style: italic;
   text-align: left;
@@ -3626,7 +3655,7 @@ nav .nav-border aside a {
   left: -40%;
 }
 
-.phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-cookie {
+.phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-cookie-phone {
   width: 700px;
   height: 700px;
   background-image: url(../img/uscookie-1.png);
@@ -3781,6 +3810,10 @@ nav .nav-border aside a {
   margin-bottom: 2rem;
 }
 
+.phone .footer-phone .footer-lax-phone .footer-info .footer-number a {
+  color: #9c6a4e;
+}
+
 .phone .footer-phone .footer-lax-phone .footer-info .footer-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3815,13 +3848,5 @@ nav .nav-border aside a {
   width: 50px;
   height: 50px;
   background-image: url(../img/icon-map.svg);
-}
-
-@media all and (max-width: 599px) {
-  .phone {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 /*# sourceMappingURL=index.css.map */

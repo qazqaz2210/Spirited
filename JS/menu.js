@@ -508,6 +508,11 @@ function output_introduce_sm(element) {
         html +=
             `
         <div class="menu-info description-phone">
+            <p class="tips">
+                <span class="tips-ch">*口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br></span>
+                <span class="tips-en">*Sweetness rating is subjective, since we are an American bakery, most items will be on the sweeter side</span>
+            </p>
+
             <p class="info-ch">
                 ${element.introduce_ch}<br>${element.composition_ch}
             </p>
@@ -536,11 +541,10 @@ function output_introduce_sm(element) {
         html +=
             `
         <div class="menu-info description-phone">
-            <!--<p>
-                    *口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br>
-                    *Sweetness rating is subjective, since we are
-                    an American bakery, most items will be on the sweeter side
-                </p>-->
+                <p class="tips">
+                    <span class="tips-ch">*口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br></span>
+                    <span class="tips-en">*Sweetness rating is subjective, since we are an American bakery, most items will be on the sweeter side</span>
+                </p>
                 <p class="info-ch">
                     ${element.composition_ch}<br>
                     ${element.preservation_ch}
@@ -599,7 +603,7 @@ function swipermidsize(item) {
             on: {
                 click: function () {
                     swiper.slideTo(swiper.clickedIndex);
-                    swipermid.slideTo(swiper.clickedIndex+index);
+                    swipermid.slideTo(swiper.clickedIndex + index);
                 },
             },
         });
@@ -608,7 +612,7 @@ function swipermidsize(item) {
             spaceBetween: 0,
             slidesPerView: index,
             slidesPerGroup: 1,
-            loop:true,
+            loop: true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
@@ -654,8 +658,7 @@ function swipermidsize(item) {
         var swipermid = new Swiper(".mySwipermid", {
             spaceBetween: 0,
             slidesPerView: 1,
-            spaceBetween: 30,
-            loop:true,
+            // loop:true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",

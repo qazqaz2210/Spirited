@@ -22,6 +22,7 @@ const buych_phone = document.querySelector('.how-txt-ch-phone')
 const about_phone = document.querySelector('.about-us-phone')
 const footer_phone = document.querySelector('.footer-phone')
 const webinside_phone = document.querySelector('.web-inside-phone')
+const cookie = document.querySelector('.phone-cookie')
 
 function doSomething(scrollPos) {
     if (document.body.clientWidth > 599) {
@@ -35,8 +36,9 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
 
-        } else if (document.documentElement.scrollTop < 2000) {
+        } else if (document.documentElement.scrollTop < 1000) {
             banner.style = 'display:none'
             background.style = 'position: absolute; top: calc(150vh + 600px);'
             fortune.style = 'display:block'
@@ -46,9 +48,10 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
 
         }
-        else if (document.documentElement.scrollTop < 3000) {
+        else if (document.documentElement.scrollTop < 2000) {
             banner.style = 'display:none'
             background.style = 'position:fixed'
             fortune.style = 'display:block'
@@ -58,6 +61,7 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
 
         } else if (document.documentElement.scrollTop < 5000) {
             banner.style = 'display:none'
@@ -69,6 +73,7 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
 
         } else if (document.documentElement.scrollTop < 7000) {
             banner.style = 'display:none'
@@ -80,6 +85,7 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:block'
 
         } else if (document.documentElement.scrollTop < 8500) {
             banner.style = 'display:none'
@@ -91,6 +97,7 @@ function doSomething(scrollPos) {
             about.style = 'display:flex'
             footer.style = 'display:none'
             webinside.style = 'overflow:visible'
+            cookie.style = 'display:block'
 
         } else if (document.documentElement.scrollTop < 9000) {
             banner.style = 'display:none'
@@ -102,6 +109,7 @@ function doSomething(scrollPos) {
             about.style = 'display:flex'
             footer.style = 'display:none'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:block'
 
         } else if (document.documentElement.scrollTop < 9500) {
             banner.style = 'display:none'
@@ -113,6 +121,7 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:block'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
 
         } else {
             banner.style = 'display:none'
@@ -124,6 +133,7 @@ function doSomething(scrollPos) {
             about.style = 'display:none'
             footer.style = 'display:block'
             webinside.style = 'overflow:hidden'
+            cookie.style = 'display:none'
         }
 
         //漢堡條變色
@@ -144,6 +154,7 @@ function doSomething(scrollPos) {
             });
         }
     }
+
     else {
         if (document.documentElement.scrollTop < 500) {
             banner_phone.style = 'display:flex'
@@ -155,10 +166,9 @@ function doSomething(scrollPos) {
             about_phone.style = 'display:none'
             footer_phone.style = 'display:none'
             webinside_phone.style = 'overflow:hidden'
-
-        }
-        else if (document.documentElement.scrollTop < 2000) {
-            banner_phone.style = 'display:none'
+            cookie.style = 'display:none'
+        } else if(document.documentElement.scrollTop < 1000) {
+            banner_phone.style = 'display:none'  
             background_phone.style = 'position: absolute; top: calc(150vh + 600px);'
             fortune_phone.style = 'display:block'
             buy_phone.style = 'display:none'
@@ -167,41 +177,51 @@ function doSomething(scrollPos) {
             about_phone.style = 'display:none'
             footer_phone.style = 'display:none'
             webinside_phone.style = 'overflow:hidden'
-        }
-        if (document.documentElement.scrollTop < 3000) {
+            cookie.style = 'display:none'
+        } else if (document.documentElement.scrollTop < 2000) {
             buy_phone.style = 'display:none'
+            background_phone.style = 'position:fixed'
             buyen_phone.style = 'display:none'
             buych_phone.style = 'display:none'
             about_phone.style = 'display:none'
             footer_phone.style = 'display:none'
             webinside_phone.style = 'overflow:hidden'
-        } else if (document.documentElement.scrollTop < 4000) {
+            cookie.style = 'display:block'
+        } else if (document.documentElement.scrollTop < 3000) {
+            background_phone.style = 'position:fixed'
             buy_phone.style = 'display:flex'
             buyen_phone.style = 'display:block'
             buych_phone.style = 'display:none'
+            cookie.style = 'display:block'
+        } else if (document.documentElement.scrollTop < 4000) {
+            buy_phone.style = 'display:flex'
+            buyen_phone.style = 'display:blcok'
+            buych_phone.style = 'display:blcok'
+            cookie.style = 'display:none'
         } else if (document.documentElement.scrollTop < 5000) {
             buy_phone.style = 'display:flex'
             buyen_phone.style = 'display:blcok'
             buych_phone.style = 'display:blcok'
-        } else if (document.documentElement.scrollTop < 6000) {
-            buy_phone.style = 'display:flex'
-            buyen_phone.style = 'display:blcok'
-            buych_phone.style = 'display:blcok'
             webinside_phone.style = 'overflow:hidden'
+            cookie.style = 'display:none'
         } else if (document.documentElement.scrollTop < 7000) {
             buy_phone.style = 'display:none'
             about_phone.style = 'display:block'
             webinside_phone.style = 'overflow:visible'
-        } else if (document.documentElement.scrollTop < 8500) {
+            cookie.style = 'display:none'
+        } else if (document.documentElement.scrollTop < 7500) {
             about_phone.style = 'display:block'
             webinside_phone.style = 'overflow:visible'
-        } else if (document.documentElement.scrollTop < 9000) {
+            cookie.style = 'display:none'
+        } else if (document.documentElement.scrollTop < 8000) {
             about_phone.style = 'display:none'
             footer_phone.style = 'display:none'
             webinside_phone.style = 'overflow:visible'
+            cookie.style = 'display:none'
         } else {
             footer_phone.style = 'display:block'
             webinside_phone.style = 'overflow:hidden'
+            cookie.style = 'display:none'
         }
     }
 }
@@ -279,11 +299,11 @@ window.onload = function () {
         lax.addElements('.fortune-heart', {
             scrollY: {
                 translateY: [
-                    ["2100", "2500"],
+                    ["1000", "2000"],
                     [300, 0],
                 ],
                 scale: [
-                    ["2100", "2500", "3000"],
+                    ["1000", "1500", "2000"],
                     [1, 2, 20],
                 ]
             }
@@ -294,7 +314,7 @@ window.onload = function () {
         lax.addElements('.how-circle', {
             scrollY: {
                 opacity: [
-                    ["3000", "3500", "6800", "7000"],
+                    ["2000", "2500", "6800", "7000"],
                     [0, 1, 1, 0],
                 ],
                 scale: [
@@ -427,25 +447,13 @@ window.onload = function () {
                 ]
             }
         })
-        lax.addElements('.phone-cookie-lax-phone', {
-            scrollY: {
-                translateX: [
-                    ["3500", "5000", "6000"],
-                    [1000, 250, -50],
-                ],
-                translateY: [
-                    ["5500", "6500"],
-                    [750, -450],
-                ],
-            }
-        })
-
+        
         // how to buy
 
         lax.addElements('.how-to-buy-lax-phone', {
             scrollY: {
                 translateY: [
-                    ["3000", "3500", "5000", "6000"],
+                    ["2000", "2500", "4000", "5000"],
                     [500, -450, -450, -1300],
                 ],
             }
@@ -454,12 +462,16 @@ window.onload = function () {
         lax.addElements('.fortune-heart-phone', {
             scrollY: {
                 translateY: [
-                    ["3000", "3500", "5000", "6000"],
-                    [-500, 800, 800, 1500],
+                    ["2000", "2500", "4000", "5000"],
+                    [-500, 1000, 1000, 1500],
                 ],
                 translateX: [
-                    ["3000", "3500", "5000", "6000"],
+                    ["2000", "2500", "4000", "5000"],
                     [-150, -50, 0, 300],
+                ],
+                opacity: [
+                    ["2000", "2500", "4000", "5000"],
+                    [1, 0.5, 0.5, 1],
                 ],
             }
         })
@@ -467,11 +479,11 @@ window.onload = function () {
         lax.addElements('.how-txt-en-lax-phone', {
             scrollY: {
                 opacity: [
-                    ["4000", "4500"],
+                    ["3000", "3500"],
                     [1, 0],
                 ],
                 translateX: [
-                    ["3000", "3500"],
+                    ["2000", "2500"],
                     [-450, 0],
                 ]
             }
@@ -480,7 +492,7 @@ window.onload = function () {
         lax.addElements('.how-txt-ch-lax-phone', {
             scrollY: {
                 opacity: [
-                    ["4500", "5000"],
+                    ["3500", "4000"],
                     [0, 1],
                 ],
             }
@@ -489,7 +501,7 @@ window.onload = function () {
         lax.addElements('.how-paper-phone', {
             scrollY: {
                 translateX: [
-                    ["5000", "6000"],
+                    ["4000", "5000"],
                     [0, -450],
                 ]
             }
@@ -500,7 +512,7 @@ window.onload = function () {
         lax.addElements('.about-cookie-phone', {
             scrollY: {
                 translateY: [
-                    ["6000", "6500", "7000"],
+                    ["5000", "5500", "6000"],
                     [-1400, -400, 0],
                 ]
             }
@@ -509,11 +521,11 @@ window.onload = function () {
         lax.addElements('.about-us-lax-phone', {
             scrollY: {
                 translateY: [
-                    ["6000", "6999", "7000"],
+                    ["5000", "5999", "6000"],
                     [-1400, -1400, 0],
                 ],
                 translateX: [
-                    ["7000", "7500", "8000", "9000"],
+                    ["6000", "6500", "7000", "8000"],
                     [-1400, 0, 0, 1400],
                 ]
             }
@@ -522,7 +534,7 @@ window.onload = function () {
         lax.addElements('.about-bag-lax-phone', {
             scrollY: {
                 translateX: [
-                    ["7000", "7500"],
+                    ["6000", "6500"],
                     [2800, 0],
                 ]
             }
@@ -531,11 +543,11 @@ window.onload = function () {
         lax.addElements('.about-cookie-phone', {
             scrollY: {
                 translateY: [
-                    ["7000", "7500"],
+                    ["6000", "6500"],
                     [-500, 0],
                 ],
                 translateX: [
-                    ["7000", "7500"],
+                    ["6000", "6500"],
                     [-1400, 0],
                 ]
             }
@@ -546,9 +558,24 @@ window.onload = function () {
         lax.addElements('.footer-lax-phone', {
             scrollY: {
                 translateX: [
-                    ["8000", "9500"],
+                    ["7000", "8500"],
                     [-1400, 0],
                 ]
+            }
+        })
+
+        // COOKIE
+
+        lax.addElements('.phone-cookie-lax', {
+            scrollY: {
+                rotate: [
+                    ["1000", "2000"],
+                    [0, 720],
+                ],
+                translateY: [
+                    ["1000", "2000"],
+                    [100, 1000],
+                ],
             }
         })
     }

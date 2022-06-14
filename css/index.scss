@@ -187,9 +187,6 @@ nav {
             width: 100%;
             height: 150vh;
             background-color: #f9e2d2;
-            @media all and (max-width: 1199px) {
-                height: 100vh;
-            }
 
             //共通swiper樣式更換
             .swiper {
@@ -697,17 +694,24 @@ nav {
                                         }
                                     }
                                     .menu-info {
-                                        width: 580px;
-                                        height: 345px;
+                                        width: 500px;
+                                        height: 800px;
                                         @include bg-style();
                                         position: absolute;
-                                        bottom: -410px;
+                                        bottom: -850px;
                                         @include flex(column);
                                         align-items: flex-start;
                                         padding: 15px;
 
-                                        @media all and (max-width: 799px) {
-                                            width: 490px;
+                                        .tips {
+                                            .tips-ch {
+                                                @include Noto-Serif-TC(0.75rem);
+                                                text-align: left;
+                                            }
+                                            .tips-en {
+                                                @include Lobster(0.75rem);
+                                                text-align: left;
+                                            }
                                         }
 
                                         .info-ch {
@@ -716,7 +720,7 @@ nav {
                                             line-height: 1.5rem;
                                         }
                                         .info-en {
-                                            @include Noto-Serif-TC(1rem);
+                                            @include Lobster(1rem);
                                             text-align: left;
                                         }
                                         p {
@@ -727,11 +731,11 @@ nav {
                                         }
                                     }
                                     .description-phone {
-                                        background-image: url(../img/menu-info-w-M.svg);
+                                        background-image: url(../img/menu-info-w.svg);
                                         color: #5d412e;
                                     }
                                     .preservation-phone {
-                                        background-image: url(../img/menu-info-b-M.svg);
+                                        background-image: url(../img/menu-info-b.svg);
                                         color: #ffffe8;
                                     }
                                 }
@@ -742,7 +746,7 @@ nav {
             }
             .shop-bottom-phone {
                 width: 100%;
-                height: 45vh;
+                height: 100vh;
                 padding-top: 5px;
                 background-image: url(../img/menu-bottom.png);
                 @include bg-style();
@@ -1450,6 +1454,7 @@ nav {
 
                                 @media all and (max-width: 1000px) {
                                     @include Volkhov(1rem);
+                                    text-align: start;
                                 }
                             }
 
@@ -1459,6 +1464,7 @@ nav {
 
                                 @media all and (max-width: 1000px) {
                                     @include Noto-Serif-TC(1rem);
+                                    text-align: start;
                                 }
                             }
                         }
@@ -1568,6 +1574,10 @@ nav {
                             margin: 0 0 1rem 0;
                             text-align: center;
                         }
+
+                        a {
+                            color: #9c6a4e;
+                        }
                     }
 
                     .footer-time {
@@ -1620,19 +1630,25 @@ nav {
 
 // W500
 .phone {
+    display: none;
     width: 100%;
     height: 100%;
 
+    @media all and (max-width: 599px) {
+        display: flex;
+    }
     .phone-cookie {
-        width: 700px;
-        height: 700px;
+        width: 300px;
+        height: 300px;
         position: fixed;
         z-index: 14;
+        display: none;
+        left: calc(50% - 150px);
 
         .phone-cookie-lax {
             width: 100%;
             height: 100%;
-            background-image: url(../img/bag-cookie.png);
+            background-image: url(../img/phone-cookie.png);
             @include bg-style();
         }
     }
@@ -1849,15 +1865,11 @@ nav {
                 }
             }
         }
-
-        @media all and (max-width: 1199px) {
-            display: flex;
-        }
     }
 
     .shop-phone {
         width: 100%;
-        height: 100vh;
+        height: 150vh;
         background-color: #f9e2d2;
         //共通swiper樣式更換
         .swiper {
@@ -2013,15 +2025,25 @@ nav {
                                     }
                                 }
                                 .menu-info {
-                                    width: 345px;
-                                    height: 345px;
+                                    width: 400px;
+                                    height: 800px;
                                     @include bg-style();
                                     position: absolute;
-                                    bottom: -410px;
+                                    bottom: -750px;
                                     @include flex(column);
                                     align-items: flex-start;
                                     padding: 15px;
-
+                                    .tips {
+                                        margin-bottom: 3rem;
+                                        .tips-ch {
+                                            @include Noto-Serif-TC(0.75rem);
+                                            text-align: left;
+                                        }
+                                        .tips-en {
+                                            @include Lobster(0.75rem);
+                                            text-align: left;
+                                        }
+                                    }
                                     .info-ch {
                                         @include Noto-Serif-TC(1rem);
                                         text-align: left;
@@ -2054,7 +2076,7 @@ nav {
         }
         .shop-bottom-phone {
             width: 100%;
-            height: 45vh;
+            height: 100vh;
             padding-top: 5px;
             background-image: url(../img/menu-bottom.png);
             @include bg-style();
@@ -2260,14 +2282,14 @@ nav {
                         height: 100%;
 
                         .how-suptitle-en {
-                            @include Volkhov(1.25rem);
+                            @include Volkhov(1rem);
                             font-style: italic;
                             text-align: start;
                             margin-bottom: 0.5rem;
                         }
 
                         .how-content-en {
-                            @include Volkhov(1rem);
+                            @include Volkhov(0.75rem);
                             font-style: italic;
                             text-align: start;
                             margin-bottom: 2.5rem;
@@ -2279,14 +2301,14 @@ nav {
                         height: 100%;
 
                         .how-suptitle-ch {
-                            @include Noto-Serif-TC(1.25rem);
+                            @include Noto-Serif-TC(1rem);
                             font-style: italic;
                             text-align: left;
                             margin-bottom: 0.55rem;
                         }
 
                         .how-content-ch {
-                            @include Noto-Serif-TC(1rem);
+                            @include Noto-Serif-TC(0.75rem);
                             font-style: italic;
                             text-align: left;
                             margin-bottom: 2.5rem;
@@ -2327,7 +2349,7 @@ nav {
                     top: -5%;
                     left: -40%;
 
-                    .about-cookie {
+                    .about-cookie-phone {
                         width: 700px;
                         height: 700px;
                         background-image: url(../img/uscookie-1.png);
@@ -2437,6 +2459,9 @@ nav {
                     @include Noto-Serif-TC(1rem);
                     color: #9c6a4e;
                     margin-bottom: 2rem;
+                    a {
+                        color: #9c6a4e;
+                    }
                 }
 
                 .footer-icons {
@@ -2464,9 +2489,5 @@ nav {
                 }
             }
         }
-    }
-
-    @media all and (max-width: 599px) {
-        display: flex;
     }
 }
