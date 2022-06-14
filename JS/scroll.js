@@ -373,7 +373,7 @@ window.onload = function () {
             scrollY: {
                 translateY: [
                     ["6500", "7000", "8000"],
-                    [-500, -200, 200],
+                    [-500, -300, 0],
                 ]
             }
         })

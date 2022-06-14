@@ -89,6 +89,7 @@ function view_all_menu_close() {
 function closeNews() {
     news.style = 'display:none';
     news_phone.style = 'display:none';
+    window.scrollTo(0, 0)
 
 }
 news.addEventListener('click', event => {
@@ -97,6 +98,7 @@ news.addEventListener('click', event => {
         setTimeout(function () {
             news.style = 'display:none'
         }, 1000);
+        window.scrollTo(0, 0)
     }
 });
 
@@ -106,6 +108,7 @@ news_phone.addEventListener('click', event => {
         setTimeout(function () {
             news_phone.style = 'display:none'
         }, 1000);
+        window.scrollTo(0, 0)
     }
 });
 
@@ -125,3 +128,4 @@ function to_about_us() {
     window.scrollTo(0, 7000)
 
 }
+
