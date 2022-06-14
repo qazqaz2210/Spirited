@@ -599,7 +599,7 @@ function swipermidsize(item) {
             on: {
                 click: function () {
                     swiper.slideTo(swiper.clickedIndex);
-                    swipermid.slideTo(swiper.clickedIndex);
+                    swipermid.slideTo(swiper.clickedIndex+index);
                 },
             },
         });
@@ -608,6 +608,7 @@ function swipermidsize(item) {
             spaceBetween: 0,
             slidesPerView: index,
             slidesPerGroup: 1,
+            loop:true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
@@ -654,6 +655,7 @@ function swipermidsize(item) {
             spaceBetween: 0,
             slidesPerView: 1,
             spaceBetween: 30,
+            loop:true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
