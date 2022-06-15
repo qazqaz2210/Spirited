@@ -35,23 +35,17 @@ function clickEvent(index) {
     Create(item);
 }
 
-function info_btn(btn) {
-    if (btn == 0) {
-        document.querySelectorAll('.description-phone').forEach(element => {
-            element.style = "display: none;"
-        });
-        document.querySelectorAll('.preservation-phone').forEach(element => {
-            element.style = "display: flex;"
-        });
+function info_btn() {
+    let active = document.querySelectorAll('.swiper-slide-active')[1]
+    if (document.querySelector('#info').checked) {
 
+
+        document.querySelector('#info').checked = false
+        document.querySelector('.info-bg').style.backgroundImage = "url(../img/menu-info-w.svg)"
     }
     else {
-        document.querySelectorAll('.description-phone').forEach(element => {
-            element.style = "display: flex;"
-        });
-        document.querySelectorAll('.preservation-phone').forEach(element => {
-            element.style = "display: none;"
-        });
+        document.querySelector('.info-bg').style.backgroundImage = "url(../img/menu-info-b.svg)"
+        document.querySelector('#info').checked = true
     }
 }
 
@@ -211,25 +205,23 @@ function Create(item) {
     // 綁定swiper
     swipermidsize(item);
 
-
-}
-//印swiper裡面的內容
-function Create_content(item, position) {
-    let html = "";
-    item.item[item_index].forEach(element => {
-        if (position == "top") {
-            html +=
-                `
+    //印swiper裡面的內容
+    function Create_content(item, position) {
+        let html = "";
+        item.item[item_index].forEach(element => {
+            if (position == "top") {
+                html +=
+                    `
             <div class="swiper-slide">
                 ${(element.item_en.length > 15) ? `<div class="item-en-sp">${element.item_en}</div>` : `<div class="item-en">${element.item_en}</div>`}
                 <div class="item-ch">${element.item_ch}</div>
             </div>
             `
-        }
-        else if (position == "mid") {
-            if (item_index != 3) {
-                html +=
-                    `
+            }
+            else if (position == "mid") {
+                if (item_index != 3) {
+                    html +=
+                        `
                 <div class="swiper-slide">
                     <div class="item-card w-100 h-100">
                         <div class="item-pic">
@@ -248,10 +240,10 @@ function Create_content(item, position) {
                     </div>
                 </div>
                     `
-            }
-            else {
-                html +=
-                    `
+                }
+                else {
+                    html +=
+                        `
                 <div class="swiper-slide">
                     <div class="item-card w-100 h-100">
                         <div class="item-pic">
@@ -266,11 +258,13 @@ function Create_content(item, position) {
                     </div>
                 </div>
                 `
+                }
             }
-        }
-    });
-    return html
+        });
+        return html
+    }
 }
+
 
 //印swiper外框_手機板
 function Create_sm(item) {
@@ -338,6 +332,7 @@ function Create_sm(item) {
                 <div class="item-mid">
                     <div class="swipermid mySwipermid">
                         <div class="swiper-wrapper swipermid-wrapper">
+                            
                             ${Create_content_sm(item)}
                         </div>
                     </div>
@@ -386,7 +381,7 @@ function Create_sm(item) {
 
 //印swiper裡面的內容_手機板
 function Create_content_sm(item) {
-    let html = "";
+    let html = `<input id="info" type="checkbox">`;
     item.item[item_index].forEach(element => {
         if (item_index != 3) {
             html +=
@@ -508,19 +503,19 @@ function output_introduce_sm(element) {
             <p class="info-en">
                 ${element.introduce_en}${element.introduce_en.length > 0 ? "<br>" : ""}${element.composition_en}
             </p>
-            <div class="info-btn" onclick="info_btn(0)">
+            <div class="info-btn" onclick="info_btn()">
                 <span class="info-ch">保存方式</span> <span class="info-en">Preservation></span>
             </div>
         </div>
             
-        <div class="menu-info preservation-phone" style="display: none">
+        <div class="menu-info preservation-phone">
             <p class="info-ch">
                 ${element.preservation_ch}
             </p>
             <p class="info-en">
                 ${element.preservation_en}
             </p>
-            <div class="info-btn" onclick="info_btn(1)">
+            <div class="info-btn" onclick="info_btn()">
                 <span class="info-ch">商品描述</span> <span class="info-en">Description></span>
             </div>
         </div>
@@ -530,6 +525,20 @@ function output_introduce_sm(element) {
         html +=
             `
         <div class="menu-info description-phone">
+                <p class="tips">
+                    <span class="tips-ch">*口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br></span>
+                    <span class="tips-en">*Sweetness rating is subjective, since we are an American bakery, most items will be on the sweeter side</span>
+                </p>
+                <p class="info-ch">
+                    ${element.composition_ch}<br>
+                    ${element.preservation_ch}
+                </p>
+                <p class="info-en">
+                    ${element.composition_en}<br>
+                    ${element.preservation_en}
+                </p>
+        </div>
+        <div class="menu-info preservation-phone">
                 <p class="tips">
                     <span class="tips-ch">*口味為較甜的美式風味，甜度屬主觀性感受，故甜度標記僅供參考<br></span>
                     <span class="tips-en">*Sweetness rating is subjective, since we are an American bakery, most items will be on the sweeter side</span>
@@ -569,7 +578,7 @@ function swipermidsize(item) {
     if (web_width == 'L') {
         swiper();
     }
-    else{
+    else {
         swiper_sm(item);
     }
     function swiper() {
@@ -599,9 +608,9 @@ function swipermidsize(item) {
             mousewheel: true,
             breakpoints: {
                 1800: {
-                  slidesPerView: 2,
+                    slidesPerView: 2,
                 }
-              },
+            },
             navigation: {
                 nextEl: ".swipermid-button-next",
                 prevEl: ".swipermid-button-prev",
@@ -621,39 +630,42 @@ function swipermidsize(item) {
                     if (swiper_item_icon.clickedIndex == 4) {
                         document.querySelector(".items").innerHTML = "Cookie"
                         item_index = 0
+                        document.querySelector('.info-bg').style = "display:block"
                     }
                     if ((swiper_item_icon.clickedIndex == 1) || (swiper_item_icon.clickedIndex == 5)) {
                         document.querySelector(".items").innerHTML = "Cakes"
                         item_index = 1
+                        document.querySelector('.info-bg').style = "display:block"
                     }
                     if (swiper_item_icon.clickedIndex == 2) {
                         document.querySelector(".items").innerHTML = "Other"
                         item_index = 2
+                        document.querySelector('.info-bg').style = "display:block"
                     }
                     if (swiper_item_icon.clickedIndex == 3) {
                         document.querySelector(".items").innerHTML = "Gift"
                         item_index = 3
+                        document.querySelector('.info-bg').style = "display:none"
                     }
                     swiper_item_icon.slideTo(swiper_item_icon.clickedIndex % 4);
                     document.querySelector('.swipermid-wrapper').innerHTML = Create_content_sm(item);
-                    swiper_item_icon.updateSlides();
+                    swiper_content_sm();
                 },
 
 
             },
         });
-        //中間有大圖+說明的swiper
-        var swipermid = new Swiper(".mySwipermid", {
-            spaceBetween: 0,
-            slidesPerView: 1.5,
-            centeredSlides:true,
-            // centeredSlidesBounds:true,
-            mousewheel: true,
-            navigation: {
-                nextEl: ".swipermid-button-next",
-                prevEl: ".swipermid-button-prev",
-            },
-        });
+        swiper_content_sm();
+        function swiper_content_sm() {
+            //中間有大圖+說明的swiper
+            var swipermid = new Swiper(".mySwipermid", {
+                spaceBetween: 0,
+                slidesPerView: 1.5,
+                centeredSlides: true,
+                mousewheel: true,
+                simulateTouch: false,
+            });
+        }
     }
 
     //看全部菜單 Swiper

@@ -3292,10 +3292,28 @@ nav .nav-border aside a {
   color: #ffffe8;
 }
 
-.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide-active .menu-info {
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide-active .preservation-phone {
+  display: none;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide-active .description-phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper input {
+  display: none;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper input:checked ~ .swiper-slide-active .preservation-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper input:checked ~ .swiper-slide-active .description-phone {
+  display: none;
 }
 
 .phone .shop-phone .shop-bottom-phone {
