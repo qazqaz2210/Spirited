@@ -706,16 +706,15 @@ nav {
                                         }
                                     }
                                     .menu-info {
-                                        width: 500px;
-                                        height: 800px;
-                                        @include bg-style();
+                                        width: 400px;
+                                        height: 650px;
                                         position: absolute;
-                                        bottom: -850px;
+                                        bottom: -700px;
                                         @include flex(column);
                                         align-items: flex-start;
-                                        padding: 15px;
-
+                                        display: none;
                                         .tips {
+                                            margin-bottom: 3rem;
                                             .tips-ch {
                                                 @include Noto-Serif-TC(0.75rem);
                                                 text-align: left;
@@ -743,12 +742,31 @@ nav {
                                         }
                                     }
                                     .description-phone {
-                                        background-image: url(../img/menu-info-w.svg);
                                         color: #5d412e;
                                     }
                                     .preservation-phone {
-                                        background-image: url(../img/menu-info-b.svg);
                                         color: #ffffe8;
+                                    }
+                                }
+                                .swiper-slide-active {
+                                    .preservation-phone {
+                                        display: none;
+                                    }
+                                    .description-phone {
+                                        display: flex;
+                                    }
+                                }
+                                input {
+                                    display: none;
+                                    &:checked {
+                                        & ~ .swiper-slide-active {
+                                            .preservation-phone {
+                                                display: flex;
+                                            }
+                                            .description-phone {
+                                                display: none;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -765,11 +783,12 @@ nav {
                 background-size: cover;
                 background-position: top;
 
-                display: flex;
-                justify-content: end;
-                align-items: flex-start;
+                @include flex(column);
+                justify-content: flex-start;
 
                 .menu-btns {
+                    margin-left: auto;
+                    padding-right: 50px;
                     .shop-btn {
                         width: 150px;
                         height: 55px;
@@ -778,7 +797,6 @@ nav {
                     }
 
                     .whole-menu-btn {
-                        margin-right: 5rem;
                         background-image: url(../img/btn-whole-menu.svg);
                     }
                 }
@@ -802,6 +820,13 @@ nav {
                             }
                         }
                     }
+                }
+                .info-bg {
+                    background-image: url(../img/menu-info-w.svg);
+                    @include bg-style();
+                    width: 450px;
+                    height: 650px;
+                    margin-bottom: 100px;
                 }
             }
         }
@@ -2036,7 +2061,7 @@ nav {
                                         }
                                     }
                                 }
-                                
+
                                 .menu-info {
                                     width: 300px;
                                     height: 650px;
@@ -2090,8 +2115,8 @@ nav {
                             }
                             input {
                                 display: none;
-                                &:checked{
-                                    &~.swiper-slide-active {
+                                &:checked {
+                                    & ~ .swiper-slide-active {
                                         .preservation-phone {
                                             display: flex;
                                         }
