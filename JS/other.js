@@ -19,8 +19,8 @@ menu_btn.onclick = function () {
         }
     }
     else {
-        nav.style = "opacity:1";
-        nav.classList.remove('d-none');
+        nav.style = "opacity:1;display:block";
+        nav.classList.remove('d-flex');
         document.querySelectorAll('.menu-btn-line').forEach(element => {
             element.classList.add('menu-btn-line-light');
             element.classList.remove('menu-btn-line-dark');
@@ -34,9 +34,8 @@ function clicklinkEvent(index) {
     clickEvent(index);
 }
 function closeList() {
-    nav.style = "opacity:0";
     setTimeout(function () {
-        nav.classList.add('d-none');
+        nav.style = "opacity:0;display:none";
     }, 500);
 }
 
