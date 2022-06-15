@@ -3221,11 +3221,8 @@ nav .nav-border aside a {
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info {
   width: 400px;
   height: 800px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
   bottom: -750px;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3243,6 +3240,7 @@ nav .nav-border aside a {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 15px;
+  display: none;
 }
 
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .menu-info .tips {
@@ -3287,13 +3285,17 @@ nav .nav-border aside a {
 }
 
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .description-phone {
-  background-image: url(../img/menu-info-w.svg);
   color: #5d412e;
 }
 
 .phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide .preservation-phone {
-  background-image: url(../img/menu-info-b.svg);
   color: #ffffe8;
+}
+
+.phone .shop-phone .shop-main-phone .mid .item-mid .swipermid .swipermid-wrapper .swiper-slide-active .menu-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .phone .shop-phone .shop-bottom-phone {
@@ -3309,12 +3311,24 @@ nav .nav-border aside a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.phone .shop-phone .shop-bottom-phone .menu-btns {
+  margin-left: auto;
+  padding-right: 50px;
 }
 
 .phone .shop-phone .shop-bottom-phone .menu-btns .shop-btn {
@@ -3327,7 +3341,6 @@ nav .nav-border aside a {
 }
 
 .phone .shop-phone .shop-bottom-phone .menu-btns .whole-menu-btn {
-  margin-right: 5rem;
   background-image: url(../img/btn-whole-menu.svg);
 }
 
@@ -3376,6 +3389,16 @@ nav .nav-border aside a {
 
 .phone .shop-phone .shop-bottom-phone .view-menu-phone .view-menu-wrapper .swiper-slide-menu img {
   height: 100%;
+}
+
+.phone .shop-phone .shop-bottom-phone .info-bg {
+  background-image: url(../img/menu-info-w.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 450px;
+  height: 650px;
+  margin-bottom: 100px;
 }
 
 .phone .how-to-buy-phone {

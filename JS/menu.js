@@ -3,11 +3,8 @@ let item;
 let item_index = 0;
 let web_width = '';
 
-if (document.body.clientWidth > 1799) {
+if (document.body.clientWidth > 1199) {
     web_width = 'L'
-}
-else if (document.body.clientWidth > 1199) {
-    web_width = 'M'
 }
 else if (document.body.clientWidth > 599) {
     web_width = 'S'
@@ -61,21 +58,12 @@ function info_btn(btn) {
 //如果改變瀏覽器寬度，重新判斷swiper大小
 function ChangeSize(item) {
     window.addEventListener('resize', () => {
-        if (document.body.clientWidth > 1799) {
+        if (document.body.clientWidth > 1199) {
             if (web_width != 'L') {
                 if (web_width == 'S') {
                     Create(item);
                 }
                 web_width = 'L'
-                swipermidsize(item);
-            }
-        }
-        else if (document.body.clientWidth > 1199) {
-            if (web_width != 'M') {
-                if (web_width == 'S') {
-                    Create(item);
-                }
-                web_width = 'M'
                 swipermidsize(item);
             }
         }
@@ -386,6 +374,7 @@ function Create_sm(item) {
                 <div class="swipermenu-button-next swiper-button-next"></div>
                 <div class="swipermenu-button-prev swiper-button-prev"></div>
             </div>
+            <div class="info-bg"></div>
         </div>
         `
         return html
@@ -578,18 +567,12 @@ function outputSweet(number) {
 function swipermidsize(item) {
     //判斷瀏覽器寬度決定swiper有幾個
     if (web_width == 'L') {
-        swiper(2);
+        swiper();
     }
-    else if (web_width == 'M') {
-        swiper(1);
-    }
-    else if (web_width == 'S') {
+    else{
         swiper_sm(item);
     }
-    else {
-        swiper_sm(item);
-    }
-    function swiper(index) {
+    function swiper() {
         //上方選單 細項選擇的swiper
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
@@ -610,10 +593,15 @@ function swipermidsize(item) {
         //中間有大圖+說明的swiper
         var swipermid = new Swiper(".mySwipermid", {
             spaceBetween: 0,
-            slidesPerView: index,
+            slidesPerView: 1,
             slidesPerGroup: 1,
             loop: true,
             mousewheel: true,
+            breakpoints: {
+                1800: {
+                  slidesPerView: 2,
+                }
+              },
             navigation: {
                 nextEl: ".swipermid-button-next",
                 prevEl: ".swipermid-button-prev",
@@ -657,8 +645,9 @@ function swipermidsize(item) {
         //中間有大圖+說明的swiper
         var swipermid = new Swiper(".mySwipermid", {
             spaceBetween: 0,
-            slidesPerView: 1,
-            loop:true,
+            slidesPerView: 1.5,
+            centeredSlides:true,
+            // centeredSlidesBounds:true,
             mousewheel: true,
             navigation: {
                 nextEl: ".swipermid-button-next",
