@@ -2038,13 +2038,12 @@ nav {
                                 }
                                 
                                 .menu-info {
-                                    width: 400px;
-                                    height: 800px;
-                                    bottom: -750px;
+                                    width: 300px;
+                                    height: 650px;
+                                    bottom: -700px;
                                     position: absolute;
                                     @include flex(column);
                                     align-items: flex-start;
-                                    padding: 15px;
                                     display: none;
                                     .tips {
                                         margin-bottom: 3rem;
