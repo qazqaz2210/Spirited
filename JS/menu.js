@@ -83,7 +83,7 @@ function Create(item) {
     if (item_index >= 0 && item_index < 4) {
         document.querySelector(".shop").innerHTML =
             `
-        <div class="shop-main">
+        <div class="shop-main vh-100">
             <div class="top w-100">
                 <div class="kanban-bg h-100">
                     <div class="kanban">
@@ -340,7 +340,7 @@ function Create_sm(item) {
             </div>
         </div>
 
-        <div class="shop-bottom-phone">
+        <div class="shop-bottom-phone vh-100">
             <!-- 按鈕 -->
             <div class="menu-btns d-flex">
                 <!-- 看全部菜單 -->
