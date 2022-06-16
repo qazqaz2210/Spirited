@@ -35,6 +35,10 @@
     text-align: center;
 }
 
+@mixin height() {
+    height: fill-available;
+}
+
 // 隱藏scrollbar
 ::-webkit-scrollbar {
     display: none;
@@ -113,7 +117,7 @@ body {
 // 選單
 nav {
     width: 100%;
-    height: 100vh;
+    @include height();
     position: fixed;
     display: none;
     z-index: 20;
@@ -224,7 +228,7 @@ nav {
 
             .shop-main {
                 width: 100%;
-                height: 100vh;
+                @include height();
 
                 .top {
                     width: 100%;
@@ -776,7 +780,7 @@ nav {
             }
             .shop-bottom-phone {
                 width: 100%;
-                height: 100vh;
+                @include height();
                 padding-top: 5px;
                 background-image: url(../img/menu-bottom.png);
                 @include bg-style();
@@ -832,7 +836,7 @@ nav {
         }
         .web-background {
             width: 100%;
-            height: 100vh;
+            @include height();
             z-index: 11;
             position: fixed;
             background-color: #40281b;
@@ -877,7 +881,7 @@ nav {
 
         .news {
             width: 100%;
-            height: 100vh;
+            @include height();
             background-color: rgba(0, 0, 0, 0.7);
             @include flex(row);
             position: fixed;
@@ -990,7 +994,7 @@ nav {
             z-index: 11;
             position: fixed;
             width: 100%;
-            height: 100vh;
+            @include height();
             @include flex(column);
 
             .banner-animation {
@@ -1698,7 +1702,7 @@ nav {
     // 同 web
     .web-background-phone {
         width: 100%;
-        height: 100vh;
+        @include height();
         z-index: 11;
         position: fixed;
         background-color: #40281b;
@@ -1744,7 +1748,7 @@ nav {
 
     .news-phone {
         width: 100%;
-        height: 100vh;
+        @include height();
         background-color: rgba(0, 0, 0, 0.7);
         @include flex(row);
         position: fixed;
@@ -1810,7 +1814,7 @@ nav {
         z-index: 11;
         position: fixed;
         width: 100%;
-        height: 100vh;
+        @include height();
         @include flex(column);
         display: none;
 
@@ -2138,7 +2142,7 @@ nav {
         }
         .shop-bottom-phone {
             width: 100%;
-            height: 100vh;
+            @include height();
             padding-top: 5px;
 
             background-image: url(../img/menu-bottom.png);

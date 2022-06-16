@@ -4,7 +4,6 @@ const a = document.querySelectorAll(".list-a");
 const news = document.querySelector('.news');
 const news_phone = document.querySelector('.news-phone');
 
-
 // 選單列開關JS
 menu_btn.onclick = function () {
     if (document.querySelector("#menu-btn").checked) {
@@ -19,8 +18,13 @@ menu_btn.onclick = function () {
         }
     }
     else {
-        nav.style = "opacity:1;display:block";
-        nav.classList.remove('d-flex');
+
+        nav.classList.add('d-flex');
+        nav.classList.remove('d-none');
+        setTimeout(function () {
+            nav.style = "opacity:1;";
+        }, 100);
+
         document.querySelectorAll('.menu-btn-line').forEach(element => {
             element.classList.add('menu-btn-line-light');
             element.classList.remove('menu-btn-line-dark');
@@ -34,9 +38,12 @@ function clicklinkEvent(index) {
     clickEvent(index);
 }
 function closeList() {
+    nav.style = "opacity:0;";
     setTimeout(function () {
-        nav.style = "opacity:0;display:none";
+        nav.classList.remove('d-flex');
+        nav.classList.add('d-none');
     }, 500);
+
 }
 
 // 如果點選網頁內連結，關閉選單列（外聯不關閉）
