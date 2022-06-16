@@ -83,7 +83,7 @@ function Create(item) {
     if (item_index >= 0 && item_index < 4) {
         document.querySelector(".shop").innerHTML =
             `
-        <div class="shop-main vh-100">
+        <div class="shop-main">
             <div class="top w-100">
                 <div class="kanban-bg h-100">
                     <div class="kanban">
@@ -176,7 +176,7 @@ function Create(item) {
                     <div class="how-to-buy-btn shop-btn" onclick="to_how_to_buy()"></div>
                 </div>
                 <!-- 全部菜單的圖片之swiper -->
-                <div class="w-100 vh-100 position-fixed d-none view-menu" onclick="view_all_menu_close()">
+                <div class="w-100 position-fixed d-none view-menu" onclick="view_all_menu_close()">
                     <div class="view-menu-wrapper mx-auto">
                         <div class="swiper mySwiper-menu">
                             <div class="swiper-wrapper swiper-wrapper-menu">
@@ -340,14 +340,14 @@ function Create_sm(item) {
             </div>
         </div>
 
-        <div class="shop-bottom-phone vh-100">
+        <div class="shop-bottom-phone">
             <!-- 按鈕 -->
             <div class="menu-btns d-flex">
                 <!-- 看全部菜單 -->
                 <div class="whole-menu-btn shop-btn" onclick="view_all_menu()"></div>
             </div>
             <!-- 全部菜單的圖片之swiper -->
-            <div class="w-100 vh-100 position-fixed d-none view-menu-phone" onclick="view_all_menu_close()">
+            <div class="w-100 position-fixed d-none view-menu-phone" onclick="view_all_menu_close()">
                 <div class="view-menu-wrapper mx-auto">
                     <div class="swiper mySwiper-menu">
                         <div class="swiper-wrapper swiper-wrapper-menu">

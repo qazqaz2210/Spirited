@@ -36,7 +36,7 @@
 }
 
 @mixin height() {
-    height: 100vh; /*給 Safari 以外的瀏覽器讀取*/
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -118,7 +118,7 @@ body {
 // 選單
 nav {
     width: 100%;
-    // @include height();
+    @include height();
     position: fixed;
     display: none;
     z-index: 20;
@@ -229,7 +229,7 @@ nav {
 
             .shop-main {
                 width: 100%;
-                // @include height();
+                @include height();
 
                 .top {
                     width: 100%;
@@ -562,6 +562,7 @@ nav {
                     }
                 }
                 .view-menu {
+                    @include height();
                     background: rgba(0, 0, 0, 0.8);
                     top: 0;
                     z-index: 21;
@@ -781,7 +782,7 @@ nav {
             }
             .shop-bottom-phone {
                 width: 100%;
-                // @include height();
+                @include height();
                 padding-top: 5px;
                 background-image: url(../img/menu-bottom.png);
                 @include bg-style();
@@ -806,6 +807,7 @@ nav {
                     }
                 }
                 .view-menu-phone {
+                    @include height();
                     background: rgba(0, 0, 0, 0.8);
                     top: 0;
                     z-index: 21;
@@ -837,7 +839,7 @@ nav {
         }
         .web-background {
             width: 100%;
-            // @include height();
+            @include height();
             z-index: 11;
             position: fixed;
             background-color: #40281b;
@@ -882,7 +884,7 @@ nav {
 
         .news {
             width: 100%;
-            // @include height();
+            @include height();
             background-color: rgba(0, 0, 0, 0.7);
             @include flex(row);
             position: fixed;
@@ -995,7 +997,7 @@ nav {
             z-index: 11;
             position: fixed;
             width: 100%;
-            // @include height();
+            @include height();
             @include flex(column);
 
             .banner-animation {
@@ -1703,7 +1705,7 @@ nav {
     // 同 web
     .web-background-phone {
         width: 100%;
-        // @include height();
+        @include height();
         z-index: 11;
         position: fixed;
         background-color: #40281b;
@@ -1749,7 +1751,7 @@ nav {
 
     .news-phone {
         width: 100%;
-        // @include height();
+        @include height();
         background-color: rgba(0, 0, 0, 0.7);
         @include flex(row);
         position: fixed;
@@ -1815,7 +1817,7 @@ nav {
         z-index: 11;
         position: fixed;
         width: 100%;
-        // @include height();
+        @include height();
         @include flex(column);
         display: none;
 
@@ -2143,7 +2145,7 @@ nav {
         }
         .shop-bottom-phone {
             width: 100%;
-            // @include height();
+            @include height();
             padding-top: 5px;
 
             background-image: url(../img/menu-bottom.png);
@@ -2169,6 +2171,7 @@ nav {
                 }
             }
             .view-menu-phone {
+                @include height();
                 background: rgba(0, 0, 0, 0.8);
                 top: 0;
                 z-index: 21;

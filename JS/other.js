@@ -4,6 +4,9 @@ const a = document.querySelectorAll(".list-a");
 const news = document.querySelector('.news');
 const news_phone = document.querySelector('.news-phone');
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 
 // 選單列開關JS
 menu_btn.onclick = function () {
