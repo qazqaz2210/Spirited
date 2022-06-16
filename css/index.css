@@ -89,9 +89,10 @@ body a:hover {
 
 nav {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   position: fixed;
   display: none;
   z-index: 20;
@@ -264,9 +265,10 @@ nav .nav-border aside a {
 
 .web main .shop .shop-main {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
 }
 
 .web main .shop .shop-main .top {
@@ -762,9 +764,10 @@ nav .nav-border aside a {
 }
 
 .web main .shop .shop-bottom .view-menu {
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   background: rgba(0, 0, 0, 0.8);
   top: 0;
   z-index: 21;
@@ -1163,9 +1166,10 @@ nav .nav-border aside a {
 
 .web main .shop .shop-bottom-phone {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   padding-top: 5px;
   background-image: url(../img/menu-bottom.png);
   background-position: center;
@@ -1210,9 +1214,10 @@ nav .nav-border aside a {
 }
 
 .web main .shop .shop-bottom-phone .view-menu-phone {
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   background: rgba(0, 0, 0, 0.8);
   top: 0;
   z-index: 21;
@@ -1271,9 +1276,10 @@ nav .nav-border aside a {
 
 .web main .web-background {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   z-index: 11;
   position: fixed;
   background-color: #40281b;
@@ -1358,9 +1364,10 @@ nav .nav-border aside a {
 
 .web main .news {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   background-color: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1572,9 +1579,10 @@ nav .nav-border aside a {
   z-index: 11;
   position: fixed;
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2618,9 +2626,10 @@ nav .nav-border aside a {
 
 .phone .web-background-phone {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   z-index: 11;
   position: fixed;
   background-color: #40281b;
@@ -2705,9 +2714,10 @@ nav .nav-border aside a {
 
 .phone .news-phone {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   background-color: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2821,9 +2831,10 @@ nav .nav-border aside a {
   z-index: 11;
   position: fixed;
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3393,9 +3404,10 @@ nav .nav-border aside a {
 
 .phone .shop-phone .shop-bottom-phone {
   width: 100%;
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   padding-top: 5px;
   background-image: url(../img/menu-bottom.png);
   background-position: center;
@@ -3440,9 +3452,10 @@ nav .nav-border aside a {
 }
 
 .phone .shop-phone .shop-bottom-phone .view-menu-phone {
-  height: 100vh;
-  /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
   background: rgba(0, 0, 0, 0.8);
   top: 0;
   z-index: 21;
