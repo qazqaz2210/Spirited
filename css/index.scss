@@ -1705,6 +1705,7 @@ nav {
         @include height();
         z-index: 11;
         position: fixed;
+        bottom: 0px;
         background-color: #40281b;
         @include flex(column);
 
