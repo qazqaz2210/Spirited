@@ -2631,6 +2631,7 @@ nav .nav-border aside a {
   height: -webkit-fill-available;
   height: fill-available;
   z-index: 11;
+  top: 0;
   position: fixed;
   background-color: #40281b;
   display: -webkit-box;
