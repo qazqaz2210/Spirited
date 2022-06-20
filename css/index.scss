@@ -37,7 +37,7 @@
 
 @mixin height() {
     // For Edge
-    height: 100%;
+    height: 100vh;
     // WebKit-based browsers will ignore this
     height: -moz-available;
     // Mozilla-based browsers will ignore this.
