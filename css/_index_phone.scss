@@ -287,29 +287,23 @@
                     }
                     .types {
                         @include flex(row);
-                        transform: translate(calc(50% - (67.5px / 2)));
-                        width: 270px;
-                        .swiper-slide {
-                            @include flex(column);
-                            justify-content: end;
-                            .type {
-                                .icon {
-                                    img {
-                                        height: 30px;
-                                        width: 30px;
-                                        filter: grayscale(100%);
-                                    }
+                        justify-self: unset;
+                        transform: translate(calc(50% - (50px / 2)));
+                        .type {
+                            .icon {
+                                img {
+                                    margin-left: 10px;
+                                    height: 30px;
+                                    width: 30px;
+                                    filter: grayscale(100%);
                                 }
                             }
-                        }
-                        .swiper-slide-active {
-                            .type {
-                                .icon {
-                                    img {
-                                        height: 50px;
-                                        width: 50px;
-                                        filter: unset;
-                                    }
+                            .action {
+                                img {
+                                    margin-left: 0px;
+                                    height: 50px;
+                                    width: 50px;
+                                    filter: unset;
                                 }
                             }
                         }
@@ -556,6 +550,11 @@
                     top: 0%;
                     left: 0%;
 
+                    @media all and(max-width:399px) {
+                        width: 175px;
+                        height: 175px;
+                    }
+
                     img {
                         width: 95%;
                         height: 95%;
@@ -571,6 +570,11 @@
                         bottom: 0%;
                         right: 0%;
 
+                        @media all and(max-width:399px) {
+                            width: 70px;
+                            height: 70px;
+                        }
+
                         .fortune-pop-3 {
                             width: 30px;
                             height: 30px;
@@ -579,6 +583,11 @@
                             position: absolute;
                             bottom: -30%;
                             right: -30%;
+
+                            @media all and(max-width:399px) {
+                                width: 21px;
+                                height: 21px;
+                            }
                         }
                     }
 
@@ -603,6 +612,15 @@
                 position: absolute;
                 top: 60%;
                 left: 10%;
+                @media all and(max-width:499px) {
+                    left: 15%;
+                    top: 40%;
+                    transform: rotate(15deg);
+                }
+                @media all and(max-width:399px) {
+                    width: 125px;
+                    height: 125px;
+                }
             }
 
             .how-circle-phone {
@@ -619,12 +637,22 @@
                     position: relative;
                     @include flex(column);
 
+                    @media all and(max-width:399px) {
+                        width: 175px;
+                        height: 175px;
+                    }
+
                     .btn-ask {
                         width: 100px;
                         height: 50px;
                         background-image: url(../img/btn-ask.svg);
                         @include bg-style();
                         z-index: 12;
+
+                        @media all and(max-width:399px) {
+                            width: 70px;
+                            height: 35px;
+                        }
                     }
 
                     .pop-line {
@@ -634,6 +662,11 @@
                         @include bg-style();
                         margin: 1rem;
                         z-index: 12;
+
+                        @media all and(max-width:399px) {
+                            width: 140px;
+                            height: 14px;
+                        }
                     }
 
                     .btn-reserve {
@@ -642,6 +675,11 @@
                         background-image: url(../img/btn-reserve.svg);
                         @include bg-style();
                         z-index: 12;
+
+                        @media all and(max-width:399px) {
+                            width: 70px;
+                            height: 35px;
+                        }
                     }
 
                     .pop-triangle {
@@ -653,6 +691,11 @@
                         clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
                         bottom: 0%;
                         left: 5%;
+
+                        @media all and(max-width:399px) {
+                            width: 105px;
+                            height: 105px;
+                        }
                     }
                 }
             }
@@ -671,6 +714,12 @@
                     position: absolute;
                     top: 30%;
                     left: 45%;
+                    @media all and(max-width:499px) {
+                        left: 50%;
+                    }
+                    @media all and(max-width:449px) {
+                        left: 60%;
+                    }
 
                     .how-txt-en-lax-phone {
                         width: 100%;
@@ -743,6 +792,12 @@
                     position: relative;
                     top: -5%;
                     left: -40%;
+                    @media all and(max-width:499px) {
+                        left: -50%;
+                    }
+                    @media all and(max-width:449px) {
+                        left: -55%;
+                    }
 
                     .about-cookie-phone {
                         width: 700px;
@@ -765,6 +820,18 @@
                             position: absolute;
                             top: 50%;
                             left: 15%;
+
+                            @media all and(max-width:499px) {
+                                left: 15%;
+                            }
+                            @media all and(max-width:399px) {
+                                font-size: 1.75rem;
+                                transform: rotateZ(0deg);
+                                left: 20%;
+                            }
+                            @media all and(max-width:369px) {
+                                left: 12%;
+                            }
                         }
 
                         .about-content {
@@ -776,17 +843,39 @@
                             top: 53%;
                             left: 35%;
 
+                            @media all and(max-width:499px) {
+                                top: 55%;
+                                left: 30%;
+                            }
+                            @media all and(max-width:449px) {
+                                left: 25%;
+                            }
+                            @media all and(max-width:399px) {
+                                left: 20%;
+                            }
+                            @media all and(max-width:369px) {
+                                left: 12%;
+                            }
+
                             .about-content-en {
                                 @include Volkhov(1rem);
                                 font-style: italic;
                                 text-align: start;
                                 margin-bottom: 2rem;
+
+                                @media all and(max-width:399px) {
+                                    font-size: 0.9rem;
+                                }
                             }
 
                             .about-content-ch {
                                 @include Noto-Serif-TC(0.8rem);
                                 font-style: italic;
                                 text-align: left;
+
+                                @media all and(max-width:399px) {
+                                    font-size: 0.75rem;
+                                }
                             }
                         }
                     }

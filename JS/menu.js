@@ -289,36 +289,24 @@ function Create_sm(item) {
 
                     <!-- 類別按鈕 -->
                     <div class="types">
-                        <div class="swiper mySwiper-item-icon">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="cookie-type type">
-                                        <div class="icon">
-                                            <img src="./img/cookie-icon.svg" alt="" height="100%">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="cake-type type">
-                                        <div class="icon">
-                                            <img src="./img/cake-icon.svg" alt="" height="100%">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="other-type type">
-                                        <div class="icon">
-                                            <img src="./img/other-icon.svg" alt="" height="100%">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="gift-type type">
-                                        <div class="icon">
-                                            <img src="./img/gift-icon.svg" alt="" height="100%">
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="cookie-type type">
+                            <div class="icon action">
+                                <img src="./img/cookie-icon.svg" alt="" height="100%">
+                            </div>
+                        </div>
+                        <div class="cake-type type">
+                            <div class="icon">
+                                <img src="./img/cake-icon.svg" alt="" height="100%">
+                            </div>
+                        </div>
+                        <div class="other-type type">
+                            <div class="icon">
+                                <img src="./img/other-icon.svg" alt="" height="100%">
+                            </div>
+                        </div>
+                        <div class="gift-type type">
+                            <div class="icon">
+                                <img src="./img/gift-icon.svg" alt="" height="100%">
                             </div>
                         </div>
                     </div>
@@ -618,54 +606,15 @@ function swipermidsize(item) {
         });
     }
 
-    function swiper_sm(item) {
-        //上方選單 類別選擇的swiper
-        var swiper_item_icon = new Swiper(".mySwiper-item-icon", {
-            direction: "horizontal",
-            slidesPerView: 4,
-            loop: true,
-            allowTouchMove: false,
-            on: {
-                click: function () {
-                    if (swiper_item_icon.clickedIndex == 4) {
-                        document.querySelector(".items").innerHTML = "Cookie"
-                        item_index = 0
-                        document.querySelector('.info-bg').style = "display:block"
-                    }
-                    if ((swiper_item_icon.clickedIndex == 1) || (swiper_item_icon.clickedIndex == 5)) {
-                        document.querySelector(".items").innerHTML = "Cakes"
-                        item_index = 1
-                        document.querySelector('.info-bg').style = "display:block"
-                    }
-                    if (swiper_item_icon.clickedIndex == 2) {
-                        document.querySelector(".items").innerHTML = "Other"
-                        item_index = 2
-                        document.querySelector('.info-bg').style = "display:block"
-                    }
-                    if (swiper_item_icon.clickedIndex == 3) {
-                        document.querySelector(".items").innerHTML = "Gift"
-                        item_index = 3
-                        document.querySelector('.info-bg').style = "display:none"
-                    }
-                    swiper_item_icon.slideTo(swiper_item_icon.clickedIndex % 4);
-                    document.querySelector('.swipermid-wrapper').innerHTML = Create_content_sm(item);
-                    swiper_content_sm();
-                },
-
-
-            },
+    function swiper_sm() {
+        //中間有大圖+說明的swiper
+        var swipermid = new Swiper(".mySwipermid", {
+            spaceBetween: 0,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            mousewheel: true,
+            simulateTouch: false,
         });
-        swiper_content_sm();
-        function swiper_content_sm() {
-            //中間有大圖+說明的swiper
-            var swipermid = new Swiper(".mySwipermid", {
-                spaceBetween: 0,
-                slidesPerView: 1.5,
-                centeredSlides: true,
-                mousewheel: true,
-                simulateTouch: false,
-            });
-        }
     }
 
     //看全部菜單 Swiper

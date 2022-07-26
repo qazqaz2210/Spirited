@@ -3100,38 +3100,21 @@ nav .nav-border aside a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transform: translate(calc(50% - (67.5px / 2)));
-          transform: translate(calc(50% - (67.5px / 2)));
-  width: 270px;
+  justify-self: unset;
+  -webkit-transform: translate(calc(50% - (50px / 2)));
+          transform: translate(calc(50% - (50px / 2)));
 }
 
-.phone .shop-phone .shop-main-phone .top .kanban .types .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-
-.phone .shop-phone .shop-main-phone .top .kanban .types .swiper-slide .type .icon img {
+.phone .shop-phone .shop-main-phone .top .kanban .types .type .icon img {
+  margin-left: 10px;
   height: 30px;
   width: 30px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
 }
 
-.phone .shop-phone .shop-main-phone .top .kanban .types .swiper-slide-active .type .icon img {
+.phone .shop-phone .shop-main-phone .top .kanban .types .type .action img {
+  margin-left: 0px;
   height: 50px;
   width: 50px;
   -webkit-filter: unset;
@@ -3571,6 +3554,13 @@ nav .nav-border aside a {
   left: 0%;
 }
 
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 {
+    width: 175px;
+    height: 175px;
+  }
+}
+
 .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 img {
   width: 95%;
   height: 95%;
@@ -3587,6 +3577,13 @@ nav .nav-border aside a {
   right: 0%;
 }
 
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 .fortune-pop-2 {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 .fortune-pop-2 .fortune-pop-3 {
   width: 30px;
   height: 30px;
@@ -3595,6 +3592,13 @@ nav .nav-border aside a {
   position: absolute;
   bottom: -30%;
   right: -30%;
+}
+
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 .fortune-pop-2 .fortune-pop-3 {
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .fortune-phone .fortune-pop-1 .fortune-heart-phone {
@@ -3620,6 +3624,22 @@ nav .nav-border aside a {
   position: absolute;
   top: 60%;
   left: 10%;
+}
+
+@media all and (max-width: 499px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-title-phone {
+    left: 15%;
+    top: 40%;
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+}
+
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-title-phone {
+    width: 125px;
+    height: 125px;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone {
@@ -3662,6 +3682,13 @@ nav .nav-border aside a {
           justify-content: center;
 }
 
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop {
+    width: 175px;
+    height: 175px;
+  }
+}
+
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .btn-ask {
   width: 100px;
   height: 50px;
@@ -3670,6 +3697,13 @@ nav .nav-border aside a {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 12;
+}
+
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .btn-ask {
+    width: 70px;
+    height: 35px;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .pop-line {
@@ -3683,6 +3717,13 @@ nav .nav-border aside a {
   z-index: 12;
 }
 
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .pop-line {
+    width: 140px;
+    height: 14px;
+  }
+}
+
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .btn-reserve {
   width: 100px;
   height: 50px;
@@ -3691,6 +3732,13 @@ nav .nav-border aside a {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 12;
+}
+
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .btn-reserve {
+    width: 70px;
+    height: 35px;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .pop-triangle {
@@ -3703,6 +3751,13 @@ nav .nav-border aside a {
           clip-path: polygon(20% 0, 100% 0, 100% 80%, 10% 100%, 0 100%, 0 90%);
   bottom: 0%;
   left: 5%;
+}
+
+@media all and (max-width: 399px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-circle-phone .how-pop .pop-triangle {
+    width: 105px;
+    height: 105px;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone {
@@ -3722,6 +3777,18 @@ nav .nav-border aside a {
   position: absolute;
   top: 30%;
   left: 45%;
+}
+
+@media all and (max-width: 499px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt {
+    left: 50%;
+  }
+}
+
+@media all and (max-width: 449px) {
+  .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt {
+    left: 60%;
+  }
 }
 
 .phone .how-to-buy-phone .how-to-buy-lax-phone .how-paper-phone .how-txt .how-txt-en-lax-phone {
@@ -3806,6 +3873,18 @@ nav .nav-border aside a {
   left: -40%;
 }
 
+@media all and (max-width: 499px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone {
+    left: -50%;
+  }
+}
+
+@media all and (max-width: 449px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone {
+    left: -55%;
+  }
+}
+
 .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-cookie-phone {
   width: 700px;
   height: 700px;
@@ -3837,6 +3916,27 @@ nav .nav-border aside a {
   left: 15%;
 }
 
+@media all and (max-width: 499px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-title {
+    left: 15%;
+  }
+}
+
+@media all and (max-width: 399px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-title {
+    font-size: 1.75rem;
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+    left: 20%;
+  }
+}
+
+@media all and (max-width: 369px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-title {
+    left: 12%;
+  }
+}
+
 .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3856,6 +3956,31 @@ nav .nav-border aside a {
   left: 35%;
 }
 
+@media all and (max-width: 499px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content {
+    top: 55%;
+    left: 30%;
+  }
+}
+
+@media all and (max-width: 449px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content {
+    left: 25%;
+  }
+}
+
+@media all and (max-width: 399px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content {
+    left: 20%;
+  }
+}
+
+@media all and (max-width: 369px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content {
+    left: 12%;
+  }
+}
+
 .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content .about-content-en {
   font-family: "Volkhov", serif;
   font-size: 1rem;
@@ -3865,12 +3990,24 @@ nav .nav-border aside a {
   margin-bottom: 2rem;
 }
 
+@media all and (max-width: 399px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content .about-content-en {
+    font-size: 0.9rem;
+  }
+}
+
 .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content .about-content-ch {
   font-family: "Noto Serif TC", serif;
   font-size: 0.8rem;
   text-align: center;
   font-style: italic;
   text-align: left;
+}
+
+@media all and (max-width: 399px) {
+  .phone .about-us-phone .about-us-lax-phone .about-bag-1 .about-bag-lax-phone .about-bag-2 .about-content .about-content-ch {
+    font-size: 0.75rem;
+  }
 }
 
 .phone .footer-phone {
