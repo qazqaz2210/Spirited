@@ -35,6 +35,120 @@ function clickEvent(index) {
     Create(item);
 }
 
+function toggleItem(index) {
+    switch (index) {
+        case 0:
+            document.querySelector('.items').innerHTML = 'Cookie'
+            document.querySelector('.types').innerHTML =
+                `<div class="cookie-type type" onclick="toggleItem(0)">
+                <div class="icon action">
+                    <img src="./img/cookie-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cake-type type" onclick="toggleItem(1)">
+                <div class="icon">
+                    <img src="./img/cake-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="other-type type" onclick="toggleItem(2)">
+                <div class="icon">
+                    <img src="./img/other-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="gift-type type" onclick="toggleItem(3)">
+                <div class="icon">
+                    <img src="./img/gift-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            `
+            break;
+
+        case 1:
+            document.querySelector('.items').innerHTML = 'Cake'
+            document.querySelector('.types').innerHTML =
+                `
+            <div class="cake-type type" onclick="toggleItem(1)">
+                <div class="icon action">
+                    <img src="./img/cake-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="other-type type" onclick="toggleItem(2)">
+                <div class="icon">
+                    <img src="./img/other-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="gift-type type" onclick="toggleItem(3)">
+                <div class="icon">
+                    <img src="./img/gift-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cookie-type type" onclick="toggleItem(0)">
+                <div class="icon">
+                    <img src="./img/cookie-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            `
+            break;
+
+        case 2:
+            document.querySelector('.items').innerHTML = 'Other'
+            document.querySelector('.types').innerHTML =
+                `
+            <div class="other-type type" onclick="toggleItem(2)">
+                <div class="icon action">
+                    <img src="./img/other-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="gift-type type" onclick="toggleItem(3)">
+                <div class="icon">
+                    <img src="./img/gift-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cookie-type type" onclick="toggleItem(0)">
+                <div class="icon">
+                    <img src="./img/cookie-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cake-type type" onclick="toggleItem(1)">
+                <div class="icon">
+                    <img src="./img/cake-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            `
+            break;
+
+        case 3:
+            document.querySelector('.items').innerHTML = 'Gift'
+            document.querySelector('.types').innerHTML =
+                `
+            <div class="gift-type type" onclick="toggleItem(3)">
+                <div class="icon action">
+                    <img src="./img/gift-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cookie-type type" onclick="toggleItem(0)">
+                <div class="icon">
+                    <img src="./img/cookie-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="cake-type type" onclick="toggleItem(1)">
+                <div class="icon">
+                    <img src="./img/cake-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            <div class="other-type type" onclick="toggleItem(2)">
+                <div class="icon">
+                    <img src="./img/other-icon.svg" alt="" height="100%">
+                </div>
+            </div>
+            `
+            break;
+    }
+    item_index = index;
+    document.querySelector('.swipermid-wrapper').innerHTML=Create_content_sm(item);
+    swipermidsize(item);
+}
+
 function info_btn() {
     let active = document.querySelectorAll('.swiper-slide-active')[1]
     if (document.querySelector('#info').checked) {
@@ -289,22 +403,22 @@ function Create_sm(item) {
 
                     <!-- 類別按鈕 -->
                     <div class="types">
-                        <div class="cookie-type type">
+                        <div class="cookie-type type" onclick="toggleItem(0)">
                             <div class="icon action">
                                 <img src="./img/cookie-icon.svg" alt="" height="100%">
                             </div>
                         </div>
-                        <div class="cake-type type">
+                        <div class="cake-type type" onclick="toggleItem(1)">
                             <div class="icon">
                                 <img src="./img/cake-icon.svg" alt="" height="100%">
                             </div>
                         </div>
-                        <div class="other-type type">
+                        <div class="other-type type" onclick="toggleItem(2)">
                             <div class="icon">
                                 <img src="./img/other-icon.svg" alt="" height="100%">
                             </div>
                         </div>
-                        <div class="gift-type type">
+                        <div class="gift-type type" onclick="toggleItem(3)">
                             <div class="icon">
                                 <img src="./img/gift-icon.svg" alt="" height="100%">
                             </div>
@@ -320,7 +434,6 @@ function Create_sm(item) {
                 <div class="item-mid">
                     <div class="swipermid mySwipermid">
                         <div class="swiper-wrapper swipermid-wrapper">
-                            
                             ${Create_content_sm(item)}
                         </div>
                     </div>
@@ -545,6 +658,8 @@ function output_introduce_sm(element) {
     }
     return html;
 }
+
+
 
 //印甜度
 function outputSweet(number) {
