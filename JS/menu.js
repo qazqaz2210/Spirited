@@ -724,7 +724,7 @@ function swipermidsize(item) {
     function swiper_sm() {
         //中間有大圖+說明的swiper
         var swipermid = new Swiper(".mySwipermid", {
-            spaceBetween: 0,
+            spaceBetween: 20,
             slidesPerView: 1.5,
             centeredSlides: true,
             mousewheel: true,
